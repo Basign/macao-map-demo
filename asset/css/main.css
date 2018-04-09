@@ -1,0 +1,117 @@
+body {
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+/* ------------------------------ atomic class ------------------------------ */
+
+.h100p {
+    height: 100%;
+}
+
+.bs {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.oh {
+    overflow: hidden;
+}
+
+/* ------------------------------ atomic class end ------------------------------ */
+
+.bC {
+    height: 100vh;
+}
+
+.C {
+    position: absolute;
+    /* 预留 header 高度 */
+    top: 100px;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ------------------------------ popup ------------------------------ */
+
+.pC {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.pp {
+    position: absolute;
+    bottom: calc(-270px - 12px);
+    right: 0;
+    width: 640px;
+    height: 270px;
+    padding: 15px;
+    background-color: #f7f7f7;
+}
+
+.pp button {
+    background-color: #bd9e58;
+    color: #ffffff;
+    border: 0;
+    cursor: pointer;
+}
+
+.pp .close {
+    position: absolute;
+    left: -12px;
+    top: -12px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+}
+
+.pp .close img {
+    vertical-align: -2px;
+}
+
+.p1 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 310px;
+    line-height: 52px;
+    background-color: #bd9e58;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.p2l,
+.p2r {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.p2l {
+    padding-top: 40px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.p2l p {
+    color: #526483;
+    margin-bottom: 20px;
+}
+
+.p2l .button {
+    height: 36px;
+    width: 160px;
+}
+
+.p2r img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ------------------------------ popup end ------------------------------ */
