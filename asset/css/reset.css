@@ -49,5 +49,6 @@ table {
 
 /* ------------------------------ custom ------------------------------ */
 button {
+	border: none;
     outline: none;
 }
