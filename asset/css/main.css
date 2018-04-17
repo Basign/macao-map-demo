@@ -150,6 +150,7 @@ a {
 .ml {
     z-index: 2;
     position: absolute;
+    top: 0;
     right: 0;
 }
 
@@ -185,6 +186,10 @@ a {
     overflow-y: auto;
     overflow-x: hidden;
     background: rgba(255, 255, 255, 0.7);
+}
+
+.mll:not(.mllf) {
+    z-index: 1;
 }
 
 .mllf {
@@ -413,3 +418,26 @@ a {
 }
 
 /* ------------------------------ menu list end ------------------------------ */
+
+/* ------------------------------ map ------------------------------ */
+
+.map {
+    height: 100%;
+    width: 100%;
+}
+
+.ol-control button:not(:first-child)::before {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    content: '';
+    width: calc(100% - 12px);
+    border-top: 1px solid #f0f4f8;
+}
+
+.ol-feature-filter {
+    top: 40%;
+    left: 15px;
+}
+
+/* ------------------------------ map end ------------------------------ */
