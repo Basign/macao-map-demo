@@ -55,6 +55,8 @@ function MenuList() {
         $('.ml').addClass('open2');
     });
 }
+
+// 点击兴趣点, 展开详情
 MenuList.prototype.initLocationDetail = function (obj) {
     $('.mlr').scrollTop(0);
 
@@ -72,7 +74,7 @@ MenuList.prototype.initLocationDetail = function (obj) {
     for (loc of obj.relatedLocations) {
         tempHtml += '<div class="bxi">' +
             '          <div>' +
-            '            <img src="' + loc.image + '" alt="related-locations" srcset="">' +
+            '            <img src="' + loc.image + '" alt="related-locations">' +
             '          </div>' +
             '          <span>' + loc.name + '</span>' +
             '        </div>';
@@ -89,11 +91,9 @@ var menuList = new MenuList();
 window.app = {};
 var app = window.app;
 
-
 //
 // Define rotate to north control.
 //
-
 
 /**
  * @constructor
@@ -127,12 +127,27 @@ app.RotateNorthControl = function (opt_options) {
     filterAll.addEventListener('click', handleRotateNorth, false);
     filterAll.addEventListener('touchstart', handleRotateNorth, false);
 
-    // TODO
+    // 观光景点
     function changeFilterViewSpot() {
         this_.getMap().setLayerGroup(new ol.layer.Group({
-            layers: [picLayer, vectorLayer2]
+            layers: [backgroundLayer, mapData.layers.layersDict['viewSpot']]
         }));
     }
+
+    // // 美食
+    // function changeFilterViewSpot() {
+    //     this_.getMap().setLayerGroup(new ol.layer.Group({
+    //         layers: [backgroundLayer, viewSpotLayer]
+    //     }));
+    // }
+
+    // // 娱乐活动
+    // function changeFilterViewSpot() {
+    //     this_.getMap().setLayerGroup(new ol.layer.Group({
+    //         layers: [backgroundLayer, viewSpotLayer]
+    //     }));
+    // }
+
     filterViewSpot.addEventListener('click', changeFilterViewSpot, false);
     filterViewSpot.addEventListener('touchstart', changeFilterViewSpot, false);
 
@@ -158,95 +173,205 @@ var zoomOut = document.createElement("img");
 zoomOut.setAttribute('src', 'asset/img/zoom-out-2.svg');
 zoomOut.setAttribute('alt', 'zoom-out');
 
-// layer1, feature1, feature2
-var iconFeature = new ol.Feature({
-    geometry: new ol.geom.Point([1200, 700]),
-    name: 'Null Island',
-    population: 4000,
-    rainfall: 500
-});
+// namespace for all features
+window.mapData = {};
+var mapData = window.mapData;
 
-var iconStyle = new ol.style.Style({
-    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-        anchor: [0.5, 48],
-        anchorXUnits: 'fraction',
-        anchorYUnits: 'pixels',
-        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
-    }))
-});
+mapData.features = {
+    data: {
+        viewSpot: [
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point([1200, 700]),
+                    name: 'Null Island',
+                    population: 4000,
+                    rainfall: 500
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 48],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'pixels',
+                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+                    }))
+                })
+            },
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point([1200, 800]),
+                    name: 'Null Island',
+                    population: 4000,
+                    rainfall: 500
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 48],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'pixels',
+                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+                    }))
+                })
+            }
+        ],
+        food: [
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point([1100, 700]),
+                    name: 'Null Island',
+                    population: 4000,
+                    rainfall: 500
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 48],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'pixels',
+                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+                    }))
+                })
+            },
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point([1100, 800]),
+                    name: 'Null Island',
+                    population: 4000,
+                    rainfall: 500
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 48],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'pixels',
+                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+                    }))
+                })
+            }
+        ],
+        entertainment: [
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point([1300, 600]),
+                    name: 'Null Island',
+                    population: 4000,
+                    rainfall: 500
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 48],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'pixels',
+                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+                    }))
+                })
+            },
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point([1300, 900]),
+                    name: 'Null Island',
+                    population: 4000,
+                    rainfall: 500
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 48],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'pixels',
+                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+                    }))
+                })
+            }
+        ],
+        holiday: [
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point([1000, 600]),
+                    name: 'Null Island',
+                    population: 4000,
+                    rainfall: 500
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 48],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'pixels',
+                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+                    }))
+                })
+            },
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point([1000, 900]),
+                    name: 'Null Island',
+                    population: 4000,
+                    rainfall: 500
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 48],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'pixels',
+                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+                    }))
+                })
+            }
+        ]
+    },
+    setFeatureStyle: function (feature, style) {
+        feature.setStyle(style);
+        return feature;
+    },
+    featuresDict: {},
+    init: function () {
+        var _ = mapData.features;
 
-iconFeature.setStyle(iconStyle);
+        // 将处理过的 features 放进 featuresDict
+        var tempArray = [];
+        for (key in _.data) {
+            tempArray = [];
+            for (value of _.data[key]) {
+                tempArray.push(_.setFeatureStyle(value.feature, value.style));
+            }
+            _.featuresDict[key] = tempArray;
+        }
+    }
+};
+mapData.features.init();
 
-var iconFeature2 = new ol.Feature({
-    geometry: new ol.geom.Point([1200, 800]),
-    name: 'Null Island',
-    population: 4000,
-    rainfall: 500
-});
+mapData.sources = {
+    setAllSourceFeature: function () {
+        var _ = mapData.sources;
+        var keys = mapData.features.data;
+        function setSourceFeature(array) {
+            return new ol.source.Vector({
+                features: array
+            })
+        }
 
-var iconStyle2 = new ol.style.Style({
-    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-        anchor: [0.5, 48],
-        anchorXUnits: 'fraction',
-        anchorYUnits: 'pixels',
-        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
-    }))
-});
+        for (key in keys) {
+            _.sourcesDict[key] = setSourceFeature(mapData.features.featuresDict[key]);
+        }
+    },
+    sourcesDict: {}
+};
+mapData.sources.setAllSourceFeature();
 
-iconFeature2.setStyle(iconStyle2);
+mapData.layers = {
+    setAllLayerSource: function () {
+        var _ = mapData.layers;
+        var keys = mapData.features.data;
+        function setLayerSource(source) {
+            return new ol.layer.Vector({
+                source: source
+            });
+        }
 
-var vectorSource = new ol.source.Vector({
-    features: [iconFeature, iconFeature2]
-});
-
-var vectorLayer = new ol.layer.Vector({
-    source: vectorSource
-});
-
-// layer2, feature3, feature4
-var iconFeature3 = new ol.Feature({
-    geometry: new ol.geom.Point([1100, 700]),
-    name: 'Null Island',
-    population: 4000,
-    rainfall: 500
-});
-
-var iconStyle3 = new ol.style.Style({
-    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-        anchor: [0.5, 48],
-        anchorXUnits: 'fraction',
-        anchorYUnits: 'pixels',
-        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
-    }))
-});
-
-iconFeature3.setStyle(iconStyle3);
-
-var iconFeature4 = new ol.Feature({
-    geometry: new ol.geom.Point([1100, 800]),
-    name: 'Null Island',
-    population: 4000,
-    rainfall: 500
-});
-
-var iconStyle4 = new ol.style.Style({
-    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-        anchor: [0.5, 48],
-        anchorXUnits: 'fraction',
-        anchorYUnits: 'pixels',
-        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
-    }))
-});
-
-iconFeature4.setStyle(iconStyle4);
-
-var vectorSource2 = new ol.source.Vector({
-    features: [iconFeature3, iconFeature4]
-});
-
-var vectorLayer2 = new ol.layer.Vector({
-    source: vectorSource2
-});
+        for (key in keys) {
+            _.layersDict[key] = setLayerSource(mapData.sources.sourcesDict[key]);
+        }
+    },
+    layersDict: {}
+};
+mapData.layers.setAllLayerSource();
 
 var extent = [0, 0, 2574, 1416];
 var projection = new ol.proj.Projection({
@@ -254,7 +379,7 @@ var projection = new ol.proj.Projection({
     units: 'pixels',
     extent: extent
 });
-var picLayer = new ol.layer.Image({
+var backgroundLayer = new ol.layer.Image({
     source: new ol.source.ImageStatic({
         url: 'https://ws1.sinaimg.cn/large/9130c6a9gy1fq9zf1bhwnj21zi13chdt.jpg',
         projection: projection,
@@ -270,7 +395,11 @@ var map = new ol.Map({
         }
     }).extend([new app.RotateNorthControl()]),
     target: document.getElementById('map'),
-    layers: [picLayer, vectorLayer, vectorLayer2],
+    layers: [backgroundLayer,
+        mapData.layers.layersDict['viewSpot'],
+        mapData.layers.layersDict['food'],
+        mapData.layers.layersDict['entertainment'],
+        mapData.layers.layersDict['holiday']],
     view: new ol.View({
         projection: projection,
         center: ol.extent.getCenter(extent),
