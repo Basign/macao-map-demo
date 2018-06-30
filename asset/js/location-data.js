@@ -1,6 +1,6 @@
 var siteData = {
     "1": {
-        "image": "http://via.placeholder.com/400x300",
+        "image": "http://via.placeholder.com/100?text=AAAA",
         "openingHours": "9 a.m. – 4 p.m.",
         "location": "澳门氹仔海边马路",
         "name": "龙环葡韵",
@@ -36,7 +36,7 @@ var siteData = {
         ]
     },
     "3": {
-        "image": "http://via.placeholder.com/400x303",
+        "image": "http://via.placeholder.com/100?text=BBBB",
         "openingHours": "9 a.m. – 4 p.m.",
         "location": "澳门氹仔海边马路",
         "name": "龙环葡韵3",

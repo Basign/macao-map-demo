@@ -600,6 +600,10 @@ a {
 
 /* ------------------------------ popover inner ------------------------------ */
 
+.popup-link-container {
+    display: block;
+}
+
 .popup-inner {
     min-width: 240px;
     padding: 2px 5px;
@@ -628,10 +632,10 @@ a {
 }
 
 .popup-inner-text-title {
-    max-width: 132px;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 8px;
+    max-width: 132px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -639,6 +643,10 @@ a {
 
 .popup-inner-text-subtitle {
     font-size: 14px;
+    max-width: 132px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .popup-inner-right-arrow {

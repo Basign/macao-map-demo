@@ -53,11 +53,9 @@ function MenuList() {
         $(this).toggleClass('text-open');
     });
 
-    $(document).on('click', '.pn>div:not(.pnt)', function () {
+    $(document).on('click', '.pn>:not(.pnt)', function () {
         var id = $(this).data('location-id');
         self.initLocationDetail(siteData[id]);
-
-        $('.ml').addClass('open2');
     });
 }
 
@@ -85,9 +83,17 @@ MenuList.prototype.initLocationDetail = function (obj) {
             '        </div>';
     }
     $('.lC').html(tempHtml);
+
+    // 修改 open 状态
+    $('.ml').addClass('open2');
+    $('.tB').addClass('menu-open');
 };
 
 var menuList = new MenuList();
+
+function triggerInitLocationDetail(id) {
+    menuList.initLocationDetail(siteData[id]);
+}
 
 // map
 /**
@@ -438,44 +444,37 @@ map.on('click', function (evt) {
         function (feature) {
             return feature;
         });
+    var coordinates;
     if (feature) {
-        var coordinates = feature.getGeometry().getCoordinates();
+        coordinates = feature.getGeometry().getCoordinates();
+        console.log(coordinates);
         popup.setPosition(coordinates);
+        $(element).popover('destroy'); // 不销毁会导致不同 feature 弹出相同 popover
         $(element).popover({
             'placement': 'top',
             'html': true,
-            'content': '<div class="popup-inner">' +
-                '                <div class="popup-inner-img-container">' +
-                '                    <img src="http://via.placeholder.com/60" alt="" class="popup-inner-img">' +
-                '                </div>' +
-                '                <div class="popup-inner-text-container">' +
-                '                    <p class="popup-inner-text-title">澳门格兰披治大赛车</p>' +
-                '                    <p class="popup-inner-text-subtitle">科科2</p>' +
-                '                </div>' +
-                '                <img src="asset/img/right.svg" alt="" class="popup-inner-right-arrow">' +
-                '            </div>'
-            // 'content': mapPopup.generatePopupHTML(feature.get('siteId'))
+            'content': '<a class="popup-link-container" href="javascript:;" onclick="triggerInitLocationDetail(\'' + feature.get('siteId') + '\');">' +
+                '           <div class="popup-inner">' +
+                '               <div class="popup-inner-img-container">' +
+                '                   <img src="' + siteData[feature.get('siteId')].image + '" class="popup-inner-img">' +
+                '               </div>' +
+                '               <div class="popup-inner-text-container">' +
+                '                   <p class="popup-inner-text-title">' + siteData[feature.get('siteId')].name + '</p>' +
+                '                   <p class="popup-inner-text-subtitle">' + siteData[feature.get('siteId')].subname + '</p>' +
+                '               </div>' +
+                '               <img src="asset/img/right.svg" alt="show-detail" class="popup-inner-right-arrow">' +
+                '           </div>' +
+                '       </a>'
         });
         $(element).popover('show');
     } else {
+        if ($('#popup+.popover').length > 0) {
+
+            $('.popup-link-container').trigger('click');
+        }
         $(element).popover('destroy');
     }
 });
-
-window.mapPopup = {};
-var mapPopup = window.mapPopup;
-mapPopup.generatePopupHTML = function (id) {
-    var popupHTML = '<div class="popup-inner">' +
-        '                <div class="popup-inner-img-container">' +
-        '                    <img src="" alt="" class="popup-inner-img">' +
-        '                </div>' +
-        '                <div class="popup-inner-text-container">' +
-        '                    <p class="popup-inner-text-title">' + siteData[id].name + '</p>' +
-        '                    <p class="popup-inner-text-subtitle">' + siteData[id].subname + '</p>' +
-        '                </div>' +
-        '                <img src="asset/img/right.svg" alt="" class="popup-inner-right-arrow">' +
-        '            </div>';
-};
 
 // change mouse cursor when over marker
 map.on('pointermove', function (e) {
