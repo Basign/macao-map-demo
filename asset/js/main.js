@@ -31,6 +31,11 @@ function MenuList() {
             var height = ($(this).siblings().length + 1) * (72 + 2) - 2;
             $(this).find('[alt="down-caret"]').addClass('open').closest('.pn').addClass('open').css('height', height + 'px');
         }
+
+        // 切换图层
+        var $this = $(this);
+        var layerIndex = $this.parent().index();
+        $('.ol-feature-filter>button').eq(layerIndex + 1).trigger('click');
     });
 
     $(document).on('click', '.mlri>.close', function () {
@@ -50,7 +55,7 @@ function MenuList() {
 
     $(document).on('click', '.pn>div:not(.pnt)', function () {
         var id = $(this).data('location-id');
-        self.initLocationDetail(site[id]);
+        self.initLocationDetail(siteData[id]);
 
         $('.ml').addClass('open2');
     });
@@ -123,9 +128,18 @@ app.RotateNorthControl = function (opt_options) {
     var filterHoliday = document.createElement('button');
     filterHoliday.innerHTML = '<img src="asset/img/balloon.svg" alt="filter-holiday">';
 
-    // TODO
-    filterAll.addEventListener('click', handleRotateNorth, false);
-    filterAll.addEventListener('touchstart', handleRotateNorth, false);
+    // 全部
+    function changeFilterAll() {
+        this_.getMap().setLayerGroup(new ol.layer.Group({
+            layers: [backgroundLayer,
+                mapData.layers.layersDict['viewSpot'],
+                mapData.layers.layersDict['food'],
+                mapData.layers.layersDict['entertainment'],
+                mapData.layers.layersDict['holiday']]
+        }));
+    }
+    filterAll.addEventListener('click', changeFilterAll, false);
+    filterAll.addEventListener('touchstart', changeFilterAll, false);
 
     // 观光景点
     function changeFilterViewSpot() {
@@ -133,23 +147,35 @@ app.RotateNorthControl = function (opt_options) {
             layers: [backgroundLayer, mapData.layers.layersDict['viewSpot']]
         }));
     }
-
-    // // 美食
-    // function changeFilterViewSpot() {
-    //     this_.getMap().setLayerGroup(new ol.layer.Group({
-    //         layers: [backgroundLayer, viewSpotLayer]
-    //     }));
-    // }
-
-    // // 娱乐活动
-    // function changeFilterViewSpot() {
-    //     this_.getMap().setLayerGroup(new ol.layer.Group({
-    //         layers: [backgroundLayer, viewSpotLayer]
-    //     }));
-    // }
-
     filterViewSpot.addEventListener('click', changeFilterViewSpot, false);
     filterViewSpot.addEventListener('touchstart', changeFilterViewSpot, false);
+
+    // 美食
+    function changeFilterFood() {
+        this_.getMap().setLayerGroup(new ol.layer.Group({
+            layers: [backgroundLayer, mapData.layers.layersDict['food']]
+        }));
+    }
+    filterFood.addEventListener('click', changeFilterFood, false);
+    filterFood.addEventListener('touchstart', changeFilterFood, false);
+
+    // 娱乐活动
+    function changeFilterEntertainment() {
+        this_.getMap().setLayerGroup(new ol.layer.Group({
+            layers: [backgroundLayer, mapData.layers.layersDict['entertainment']]
+        }));
+    }
+    filterEntertainment.addEventListener('click', changeFilterEntertainment, false);
+    filterEntertainment.addEventListener('touchstart', changeFilterEntertainment, false);
+
+    // 节日盛事
+    function changeFilterHoliday() {
+        this_.getMap().setLayerGroup(new ol.layer.Group({
+            layers: [backgroundLayer, mapData.layers.layersDict['holiday']]
+        }));
+    }
+    filterHoliday.addEventListener('click', changeFilterHoliday, false);
+    filterHoliday.addEventListener('touchstart', changeFilterHoliday, false);
 
     var element = document.createElement('div');
     element.className = 'ol-feature-filter ol-unselectable ol-control bs20 oh';
@@ -183,9 +209,7 @@ mapData.features = {
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1200, 700]),
-                    name: 'Null Island',
-                    population: 4000,
-                    rainfall: 500
+                    siteId: '1'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
@@ -199,9 +223,7 @@ mapData.features = {
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1200, 800]),
-                    name: 'Null Island',
-                    population: 4000,
-                    rainfall: 500
+                    siteId: '2'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
@@ -217,9 +239,7 @@ mapData.features = {
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1100, 700]),
-                    name: 'Null Island',
-                    population: 4000,
-                    rainfall: 500
+                    siteId: '3'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
@@ -233,9 +253,7 @@ mapData.features = {
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1100, 800]),
-                    name: 'Null Island',
-                    population: 4000,
-                    rainfall: 500
+                    siteId: '1'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
@@ -251,9 +269,7 @@ mapData.features = {
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1300, 600]),
-                    name: 'Null Island',
-                    population: 4000,
-                    rainfall: 500
+                    siteId: '2'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
@@ -267,9 +283,7 @@ mapData.features = {
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1300, 900]),
-                    name: 'Null Island',
-                    population: 4000,
-                    rainfall: 500
+                    siteId: '3'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
@@ -285,9 +299,7 @@ mapData.features = {
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1000, 600]),
-                    name: 'Null Island',
-                    population: 4000,
-                    rainfall: 500
+                    siteId: '1'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
@@ -301,9 +313,7 @@ mapData.features = {
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1000, 900]),
-                    name: 'Null Island',
-                    population: 4000,
-                    rainfall: 500
+                    siteId: '2'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
@@ -431,21 +441,46 @@ map.on('click', function (evt) {
     if (feature) {
         var coordinates = feature.getGeometry().getCoordinates();
         popup.setPosition(coordinates);
-        // $(element).popover({
-        //     'placement': 'top',
-        //     'html': true,
-        //     'content': feature.get('name')
-        // });
-        // $(element).popover('show');
+        $(element).popover({
+            'placement': 'top',
+            'html': true,
+            'content': '<div class="popup-inner">' +
+                '                <div class="popup-inner-img-container">' +
+                '                    <img src="http://via.placeholder.com/60" alt="" class="popup-inner-img">' +
+                '                </div>' +
+                '                <div class="popup-inner-text-container">' +
+                '                    <p class="popup-inner-text-title">澳门格兰披治大赛车</p>' +
+                '                    <p class="popup-inner-text-subtitle">科科2</p>' +
+                '                </div>' +
+                '                <img src="asset/img/right.svg" alt="" class="popup-inner-right-arrow">' +
+                '            </div>'
+            // 'content': mapPopup.generatePopupHTML(feature.get('siteId'))
+        });
+        $(element).popover('show');
     } else {
-        // $(element).popover('destroy');
+        $(element).popover('destroy');
     }
 });
+
+window.mapPopup = {};
+var mapPopup = window.mapPopup;
+mapPopup.generatePopupHTML = function (id) {
+    var popupHTML = '<div class="popup-inner">' +
+        '                <div class="popup-inner-img-container">' +
+        '                    <img src="" alt="" class="popup-inner-img">' +
+        '                </div>' +
+        '                <div class="popup-inner-text-container">' +
+        '                    <p class="popup-inner-text-title">' + siteData[id].name + '</p>' +
+        '                    <p class="popup-inner-text-subtitle">' + siteData[id].subname + '</p>' +
+        '                </div>' +
+        '                <img src="asset/img/right.svg" alt="" class="popup-inner-right-arrow">' +
+        '            </div>';
+};
 
 // change mouse cursor when over marker
 map.on('pointermove', function (e) {
     if (e.dragging) {
-        // $(element).popover('destroy');
+        $(element).popover('destroy');
         return;
     }
     var pixel = map.getEventPixel(e.originalEvent);

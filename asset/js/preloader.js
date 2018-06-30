@@ -13,8 +13,8 @@ $(window).on('load', function () {
     /* images is an array with image metadata */
 
     var images = [];
-    for (loc in site) {
-        images.push(site[loc].image);
+    for (loc in siteData) {
+        images.push(siteData[loc].image);
     }
     preload(images);
 });
