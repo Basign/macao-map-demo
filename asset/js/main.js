@@ -28,10 +28,17 @@ function MenuList() {
     $(document).on('click', '.pn>.pnt', function () {
         // 如果此分类已展开
         if ($(this).closest('.pn').hasClass('open')) {
-            $(this).find('[alt="down-caret"]').removeClass('open').closest('.pn').removeClass('open').removeAttr('style');
+            // down-caret 收起
+            $('[alt="down-caret"]').removeClass('open');
+            $(this).closest('.pn').removeClass('open').removeAttr('style');
         } else { // 未展开
+            // 其他已展开分类切换 class
             $('.pn.open').removeClass('open').removeAttr('style');
+            // down-caret 收起
+            $('[alt="down-caret"]').removeClass('open');
+            // 分类收起
             var height = ($(this).siblings().length + 1) * (72 + 2) - 2;
+
             $(this).find('[alt="down-caret"]').addClass('open').closest('.pn').addClass('open').css('height', height + 'px');
         }
 
