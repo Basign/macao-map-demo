@@ -1,3 +1,10 @@
+(function () {
+    var containerHeight = $('.C').offset().top;
+    $('.C').css({
+        height: 'calc(100vh - ' + containerHeight + 'px)'
+    })
+})();
+
 function Popup() {
     function togglePopup() {
         $('.pC>.pp').toggleClass('open');
@@ -70,8 +77,7 @@ function MenuList() {
 
     $(document).on('click', '.mlrb', function findOnMap() {
         $('.tB').trigger('click');
-        map.getView().setCenter(self.currentFeatureCoordinates);
-        map.getView().setResolution(0.5);
+        map.getView().animate({ center: self.currentFeatureCoordinates }, { resolution: 0.5 });
     });
 }
 
@@ -114,23 +120,15 @@ function triggerInitLocationDetail(id) {
     menuList.initLocationDetail(siteData[id]);
 }
 
-// map
-/**
- * Define a namespace for the application.
- */
 window.app = {};
 var app = window.app;
-
-//
-// Define rotate to north control.
-//
 
 /**
  * @constructor
  * @extends {ol.control.Control}
  * @param {Object=} opt_options Control options.
  */
-app.RotateNorthControl = function (opt_options) {
+app.CustomControl = function (opt_options) {
     var options = opt_options || {};
 
     var this_ = this;
@@ -215,14 +213,7 @@ app.RotateNorthControl = function (opt_options) {
         target: options.target
     });
 };
-ol.inherits(app.RotateNorthControl, ol.control.Control);
-
-var zoomIn = document.createElement("img");
-zoomIn.setAttribute('src', 'asset/img/zoom-in-2.svg');
-zoomIn.setAttribute('alt', 'zoom-in');
-var zoomOut = document.createElement("img");
-zoomOut.setAttribute('src', 'asset/img/zoom-out-2.svg');
-zoomOut.setAttribute('alt', 'zoom-out');
+ol.inherits(app.CustomControl, ol.control.Control);
 
 // namespace for all features
 window.mapData = {};
@@ -416,6 +407,7 @@ mapData.layers = {
 };
 mapData.layers.setAllLayerSource();
 
+// map 参数
 var extent = [0, 0, 2574, 1416];
 var projection = new ol.proj.Projection({
     code: 'macao-001',
@@ -424,11 +416,20 @@ var projection = new ol.proj.Projection({
 });
 var backgroundLayer = new ol.layer.Image({
     source: new ol.source.ImageStatic({
+        // TODO
         url: 'https://ws1.sinaimg.cn/large/9130c6a9gy1fq9zf1bhwnj21zi13chdt.jpg',
         projection: projection,
         imageExtent: extent
     })
 });
+
+var zoomIn = document.createElement("img");
+zoomIn.setAttribute('src', 'asset/img/zoom-in-2.svg');
+zoomIn.setAttribute('alt', 'zoom-in');
+var zoomOut = document.createElement("img");
+zoomOut.setAttribute('src', 'asset/img/zoom-out-2.svg');
+zoomOut.setAttribute('alt', 'zoom-out');
+
 var map = new ol.Map({
     controls: ol.control.defaults({
         attribution: false,
@@ -437,7 +438,7 @@ var map = new ol.Map({
             zoomInLabel: zoomIn,
             zoomOutLabel: zoomOut
         }
-    }).extend([new app.RotateNorthControl()]),
+    }).extend([new app.CustomControl()]),
     target: document.getElementById('map'),
     layers: [backgroundLayer,
         mapData.layers.layersDict['viewSpot'],
