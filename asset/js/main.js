@@ -16,10 +16,10 @@ function MenuList() {
 
     $(document).on('click', '.ml>.tB', function () {
         if ($(this).hasClass('menu-open')) {
-            $(this).removeClass('menu-open').find('img').attr('src', 'asset/img/menu.svg');
+            $(this).removeClass('menu-open');
             $('.ml').removeClass('open1 open2');
         } else {
-            $(this).addClass('menu-open').find('img').attr('src', 'asset/img/close-2.svg');
+            $(this).addClass('menu-open');
             $('.ml').addClass('open1');
         }
     });

@@ -174,8 +174,16 @@ a {
     cursor: pointer;
 }
 
-.tB [alt="menu-button"] {
+.tBi {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
     vertical-align: -22px;
+    background: 100% 100% no-repeat url('../img/menu.svg');
+}
+
+.tB.menu-open .tBi {
+    background: 100% 100% no-repeat url('../img/close-2.svg');
 }
 
 .mll {
