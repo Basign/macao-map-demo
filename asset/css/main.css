@@ -249,7 +249,7 @@ a {
     transform: rotate(-180deg);
 }
 
-.pn>div:not(.pnt) [alt="attraction"] {
+.pn>div:not(.pnt) img {
     position: absolute;
     right: 0;
     top: 14px;
@@ -348,9 +348,9 @@ a {
 }
 
 .sdC {
-    max-height: 80px;
-    font-size: 12px;
-    line-height: 1.33333333;
+    max-height: 90px;
+    font-size: 13px;
+    line-height: 1.4;
 }
 
 .sdC p {
@@ -655,3 +655,33 @@ a {
 }
 
 /* ------------------------------ popover inner end ------------------------------ */
+
+/* ------------------------------ mobile ------------------------------ */
+
+.p1M {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    line-height: 52px;
+    font-size: 18px;
+    background-color: #bd9e58;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+@media screen and (max-width:414px) {
+    .tB,
+    .ol-zoom,
+    .ol-feature-filter,
+    .p1 {
+        display: none;
+    }
+    .p1M {
+        display: block;
+    }
+}
+
+/* ------------------------------ mobile end ------------------------------ */

@@ -12,6 +12,7 @@ var popup = new Popup();
 
 function MenuList() {
     var self = this;
+    this.currentFeatureCoordinates = [];
 
     $(document).on('click', '.ml>.tB', function () {
         if ($(this).hasClass('menu-open')) {
@@ -23,10 +24,12 @@ function MenuList() {
         }
     });
 
+    // menuList 一级菜单
     $(document).on('click', '.pn>.pnt', function () {
+        // 如果此分类已展开
         if ($(this).closest('.pn').hasClass('open')) {
             $(this).find('[alt="down-caret"]').removeClass('open').closest('.pn').removeClass('open').removeAttr('style');
-        } else {
+        } else { // 未展开
             $('.pn.open').removeClass('open').removeAttr('style');
             var height = ($(this).siblings().length + 1) * (72 + 2) - 2;
             $(this).find('[alt="down-caret"]').addClass('open').closest('.pn').addClass('open').css('height', height + 'px');
@@ -44,7 +47,7 @@ function MenuList() {
 
     $(document).on('click', '.mlrc>.tg', function () {
         if ($(this).hasClass('text-open')) {
-            $('.sdC').css('max-height', '80px');
+            $('.sdC').css('max-height', '90px');
             $(this).children().html('展开');
         } else {
             $('.sdC').css('max-height', 'unset');
@@ -57,13 +60,19 @@ function MenuList() {
         var id = $(this).data('location-id');
         self.initLocationDetail(siteData[id]);
     });
+
+    $(document).on('click', '.mlrb', function findOnMap() {
+        $('.tB').trigger('click');
+        map.getView().setCenter(self.currentFeatureCoordinates);
+        map.getView().setResolution(0.5);
+    });
 }
 
 // 点击兴趣点, 展开详情
 MenuList.prototype.initLocationDetail = function (obj) {
     $('.mlr').scrollTop(0);
 
-    $('.sdC').css('max-height', '80px');
+    $('.sdC').css('max-height', '90px');
     $('.mlrc>.tg>a').html('展开');
     $('.mlrc>.tg').removeClass('text-open');
 
@@ -87,6 +96,9 @@ MenuList.prototype.initLocationDetail = function (obj) {
     // 修改 open 状态
     $('.ml').addClass('open2');
     $('.tB').addClass('menu-open');
+
+    // 记录当前点击 feature 坐标，为 findOnMap() 确定位置
+    this.currentFeatureCoordinates = obj.coordinates;
 };
 
 var menuList = new MenuList();
@@ -212,6 +224,7 @@ var mapData = window.mapData;
 mapData.features = {
     data: {
         viewSpot: [
+            // 大三巴
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1200, 700]),
@@ -226,6 +239,7 @@ mapData.features = {
                     }))
                 })
             },
+            // 大炮台
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1200, 800]),
@@ -242,10 +256,11 @@ mapData.features = {
             }
         ],
         food: [
+            // 杏仁饼
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1100, 700]),
-                    siteId: '3'
+                    siteId: '15'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
@@ -256,10 +271,11 @@ mapData.features = {
                     }))
                 })
             },
+            // 葡式蛋挞
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1100, 800]),
-                    siteId: '1'
+                    siteId: '23'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
@@ -272,10 +288,11 @@ mapData.features = {
             }
         ],
         entertainment: [
+            // 购物中心
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1300, 600]),
-                    siteId: '2'
+                    siteId: '18'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
@@ -286,10 +303,11 @@ mapData.features = {
                     }))
                 })
             },
+            // 家庭儿童娱乐
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1300, 900]),
-                    siteId: '3'
+                    siteId: '19'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
@@ -302,10 +320,11 @@ mapData.features = {
             }
         ],
         holiday: [
+            // 澳门光影节
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1000, 600]),
-                    siteId: '1'
+                    siteId: '25'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
@@ -316,10 +335,11 @@ mapData.features = {
                     }))
                 })
             },
+            // 澳门格兰披治大赛车
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point([1000, 900]),
-                    siteId: '2'
+                    siteId: '26'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
@@ -404,6 +424,7 @@ var backgroundLayer = new ol.layer.Image({
 });
 var map = new ol.Map({
     controls: ol.control.defaults({
+        attribution: false,
         zoomOptions: {
             className: 'ol-zoom oh bs20',
             zoomInLabel: zoomIn,
@@ -439,7 +460,7 @@ var popup = new ol.Overlay({
 map.addOverlay(popup);
 
 // display popup on click
-map.on('click', function (evt) {
+function mapClick(evt) {
     var feature = map.forEachFeatureAtPixel(evt.pixel,
         function (feature) {
             return feature;
@@ -447,9 +468,11 @@ map.on('click', function (evt) {
     var coordinates;
     if (feature) {
         coordinates = feature.getGeometry().getCoordinates();
-        console.log(coordinates);
         popup.setPosition(coordinates);
-        $(element).popover('destroy'); // 不销毁会导致不同 feature 弹出相同 popover
+        if ($('#popup+.popover').length > 0) {
+            // $('.popup-link-container').trigger('click');
+            $(element).popover('destroy'); // 不销毁会导致不同 feature 弹出相同 popover
+        }
         $(element).popover({
             'placement': 'top',
             'html': true,
@@ -468,13 +491,15 @@ map.on('click', function (evt) {
         });
         $(element).popover('show');
     } else {
-        if ($('#popup+.popover').length > 0) {
+        // TODO 点击到 popover 上 trigger
+        // if ($('#popup+.popover').length > 0) {
 
-            $('.popup-link-container').trigger('click');
-        }
-        $(element).popover('destroy');
+        //     $('.popup-link-container').trigger('click');
+        // }
+        // $(element).popover('destroy');
     }
-});
+}
+map.on('click', mapClick);
 
 // change mouse cursor when over marker
 map.on('pointermove', function (e) {
