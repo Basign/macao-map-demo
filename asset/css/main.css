@@ -40,6 +40,10 @@ a {
 
 /* ------------------------------ atomic class end ------------------------------ */
 
+.C {
+    position: relative;
+}
+
 /* ------------------------------ popup ------------------------------ */
 
 .pC {
@@ -196,8 +200,8 @@ a {
     z-index: 1;
     height: calc(100% + 60px);
     width: calc(100% + 60px);
-    /* TODO */
-    background-image: url(http://b3-q.mafengwo.net/s6/M00/11/72/wKgB4lMVcpmAQQlRAAGw8ilAe8M38.jpeg?im…nail%2F%211360x940r%2Fgravity%2FCenter%2Fcrop%2F%211360x940%2Fquality%2F90);
+    /* TODO 高斯模糊无法实现, 替代方案待确认 */
+    background-image: url('https://ws1.sinaimg.cn/large/9130c6a9gy1fq9zf1bhwnj21zi13chdt.jpg');
     background-size: auto 100%;
     background-position: top right;
     filter: blur(30px);
@@ -231,7 +235,7 @@ a {
     cursor: pointer;
 }
 
-.pn>div:not(.pnt) {
+.pn>:not(.pnt) {
     border-top: 2px solid #f0f3f3;
 }
 
@@ -245,7 +249,7 @@ a {
     transform: rotate(-180deg);
 }
 
-.pn>div:not(.pnt) img {
+.pn>:not(.pnt) img {
     position: absolute;
     right: 0;
     top: 14px;
@@ -328,11 +332,11 @@ a {
     border-left: 1px solid #e2e5e7;
 }
 
-.bxi>div:first-child {
+.bxi>:first-child {
     line-height: 40px;
 }
 
-.bxi>div:first-child img {
+.bxi>:first-child img {
     vertical-align: -5px;
 }
 
@@ -386,11 +390,11 @@ a {
     width: 100%;
 }
 
-.mlrb .bxi>div:first-child {
+.mlrb .bxi>:first-child {
     line-height: 75px;
 }
 
-.mlrb .bxi>div:first-child img {
+.mlrb .bxi>:first-child img {
     vertical-align: -12px;
 }
 
@@ -399,11 +403,11 @@ a {
     text-align: center;
 }
 
-.mlrb2 .bxi>div:first-child {
+.mlrb2 .bxi>:first-child {
     line-height: 1;
 }
 
-.mlrb2 .bxi>div:first-child img {
+.mlrb2 .bxi>:first-child img {
     height: 144px;
     width: 144px;
     border-radius: 50%;
@@ -424,7 +428,7 @@ a {
     background-color: #a9cad8;
 }
 
-.ol-control button:not(:first-child)::before {
+.ol-control>:not(:first-child)::before {
     position: absolute;
     top: 0;
     left: 6px;

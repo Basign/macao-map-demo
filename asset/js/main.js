@@ -1,8 +1,15 @@
 (function () {
+    // 设置地图容器高度
     var containerHeight = $('.C').offset().top;
     $('.C').css({
         height: 'calc(100vh - ' + containerHeight + 'px)'
-    })
+    });
+
+    // 设置 menuList 图片
+    $('.pn>:not(.pnt)').each(function () {
+        var locationId = $(this).data('location-id');
+        $(this).children('img').attr({ 'src': siteData[locationId].image, 'alt': siteData[locationId].name });
+    });
 })();
 
 function Popup() {
