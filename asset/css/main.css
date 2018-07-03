@@ -185,27 +185,11 @@ a {
     padding: 15px;
     overflow-y: auto;
     overflow-x: hidden;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(221, 239, 252, 0.7);
 }
 
 .mll:not(.mllf) {
     z-index: 1;
-}
-
-.mllf {
-    padding: 0;
-}
-
-.mllf>div {
-    z-index: 1;
-    height: calc(100% + 60px);
-    width: calc(100% + 60px);
-    /* TODO 高斯模糊无法实现, 替代方案待确认 */
-    background-image: url('https://ws1.sinaimg.cn/large/9130c6a9gy1fq9zf1bhwnj21zi13chdt.jpg');
-    background-size: auto 100%;
-    background-position: top right;
-    filter: blur(30px);
-    margin: -30px;
 }
 
 .pnC {
@@ -231,8 +215,17 @@ a {
 
 .pn>div {
     position: relative;
-    line-height: 72px;
+    height: 74px;
+    line-height: 73px;
     cursor: pointer;
+}
+
+.ln {
+    display: inline-block;
+    width: calc(100% - 40px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .pn>:not(.pnt) {
@@ -338,6 +331,11 @@ a {
 
 .bxi>:first-child img {
     vertical-align: -5px;
+}
+
+.opening-hours,
+.site-location {
+    font-size: 12px;
 }
 
 .site-name {
