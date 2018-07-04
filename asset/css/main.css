@@ -11,6 +11,12 @@ a {
     text-decoration: none;
 }
 
+/* 去掉点击时的蓝色背景和边框 */
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 /* ------------------------------ atomic class ------------------------------ */
 
 .h100p {
@@ -26,11 +32,12 @@ a {
 }
 
 .tr5 {
-    -webkit-transform: translate3d(0, 0, 0);
+    /* 使用 translate3d 进行动画硬件加速, 会导致内部元素 position: fixed 表现得像 position: absolute */
+    /* -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); */
     transition: all .5s;
 }
 
@@ -174,7 +181,7 @@ a {
     background: 100% 100% no-repeat url('../img/menu.svg');
 }
 
-.tB.menu-open .tBi {
+.menu-open .tBi {
     background: 100% 100% no-repeat url('../img/close-2.svg');
 }
 
@@ -670,8 +677,11 @@ a {
     cursor: pointer;
 }
 
+.cBC {
+    display: none;
+}
+
 @media screen and (max-width:414px) {
-    .tB,
     .ol-zoom,
     .ol-feature-filter,
     .p1 {
@@ -679,6 +689,40 @@ a {
     }
     .p1M {
         display: block;
+    }
+    .tB {
+        position: fixed;
+        top: auto;
+        bottom: 66px;
+        right: 76px;
+        border-radius: 22.5px;
+    }
+    .menu-open .tBi {
+        background: 100% 100% no-repeat url('../img/menu.svg');
+    }
+    .mll {
+        width: 100vw;
+        right: calc(0px - 100vw);
+        height: calc(100% - 52px);
+    }
+    .ml.open1 {
+        right: 100vw;
+    }
+    .ml.open2 {
+        right: 200vw;
+    }
+    .mlr {
+        width: 100vw;
+        right: calc(0px - 200vw);
+        height: calc(100% - 52px);
+    }
+    .cBC {
+        display: block;
+        padding-bottom: 12px;
+        overflow: auto;
+    }
+    .cBC>img {
+        float: right;
     }
 }
 

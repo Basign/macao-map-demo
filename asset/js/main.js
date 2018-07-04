@@ -28,13 +28,11 @@ function MenuList() {
     var self = this;
     this.currentFeatureCoordinates = [];
 
-    $(document).on('click', '.ml>.tB', function () {
-        if ($(this).hasClass('menu-open')) {
-            $(this).removeClass('menu-open');
-            $('.ml').removeClass('open1 open2');
+    $(document).on('click', '.ml>.tB, .cBC>img', function () {
+        if ($('.ml').hasClass('menu-open')) {
+            $('.ml').removeClass('menu-open open1 open2');
         } else {
-            $(this).addClass('menu-open');
-            $('.ml').addClass('open1');
+            $('.ml').addClass('menu-open open1');
         }
     });
 
@@ -114,8 +112,7 @@ MenuList.prototype.initLocationDetail = function (obj) {
     $('.lC').html(tempHtml);
 
     // 修改 open 状态
-    $('.ml').addClass('open2');
-    $('.tB').addClass('menu-open');
+    $('.ml').addClass('menu-open open2');
 
     // 记录当前点击 feature 坐标，为 findOnMap() 确定位置
     this.currentFeatureCoordinates = obj.coordinates;
