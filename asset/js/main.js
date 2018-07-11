@@ -246,30 +246,30 @@ mapData.features = {
             // 大三巴
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point([1200, 700]),
+                    geometry: new ol.geom.Point(siteData['1'].coordinates),
                     siteId: '1'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 48],
+                        anchor: [0.5, 1],
                         anchorXUnits: 'fraction',
-                        anchorYUnits: 'pixels',
-                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/11/Pud0eg.png'
                     }))
                 })
             },
             // 大炮台
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point([1200, 800]),
+                    geometry: new ol.geom.Point(siteData['2'].coordinates),
                     siteId: '2'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 48],
+                        anchor: [0.5, 1],
                         anchorXUnits: 'fraction',
-                        anchorYUnits: 'pixels',
-                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/11/PuwPpt.png'
                     }))
                 })
             }
@@ -278,30 +278,30 @@ mapData.features = {
             // 杏仁饼
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point([1100, 700]),
+                    geometry: new ol.geom.Point(siteData['15'].coordinates),
                     siteId: '15'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 48],
+                        anchor: [0.5, 1],
                         anchorXUnits: 'fraction',
-                        anchorYUnits: 'pixels',
-                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/11/Puwuhn.png'
                     }))
                 })
             },
             // 葡式蛋挞
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point([1100, 800]),
+                    geometry: new ol.geom.Point(siteData['23'].coordinates),
                     siteId: '23'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 48],
+                        anchor: [0.5, 1],
                         anchorXUnits: 'fraction',
-                        anchorYUnits: 'pixels',
-                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/11/PuwBjK.png'
                     }))
                 })
             }
@@ -310,30 +310,30 @@ mapData.features = {
             // 购物中心
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point([1300, 600]),
+                    geometry: new ol.geom.Point(siteData['18'].coordinates),
                     siteId: '18'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 48],
+                        anchor: [0.5, 1],
                         anchorXUnits: 'fraction',
-                        anchorYUnits: 'pixels',
-                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/11/Pu06MV.png'
                     }))
                 })
             },
             // 家庭儿童娱乐
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point([1300, 900]),
+                    geometry: new ol.geom.Point(siteData['19'].coordinates),
                     siteId: '19'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 48],
-                        anchorXUnits: 'fraction',
+                        anchor: [5, 5],
+                        anchorXUnits: 'pixels',
                         anchorYUnits: 'pixels',
-                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+                        src: 'https://s1.ax1x.com/2018/07/11/Pu0LZD.png'
                     }))
                 })
             }
@@ -342,14 +342,14 @@ mapData.features = {
             // 澳门光影节
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point([1000, 600]),
+                    geometry: new ol.geom.Point(siteData['19'].coordinates),
                     siteId: '25'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 48],
+                        anchor: [0.5, 1],
                         anchorXUnits: 'fraction',
-                        anchorYUnits: 'pixels',
+                        anchorYUnits: 'fraction',
                         src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
                     }))
                 })
@@ -357,15 +357,30 @@ mapData.features = {
             // 澳门格兰披治大赛车
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point([1000, 900]),
+                    geometry: new ol.geom.Point(siteData['26'].coordinates),
                     siteId: '26'
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 48],
+                        anchor: [0.5, 1],
                         anchorXUnits: 'fraction',
-                        anchorYUnits: 'pixels',
-                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/11/PuBMLT.png'
+                    }))
+                })
+            },
+            // 烟花
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['27'].coordinates),
+                    siteId: '27'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/11/PuB0eO.png'
                     }))
                 })
             }

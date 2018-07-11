@@ -5,7 +5,7 @@ var siteData = {
         "openingHours": "上午9时至下午6时，下午5时30分停止入场。",
         "description": "大三巴牌坊是天主之母教堂（即圣保禄教堂）正面前壁的遗址。</br>圣保禄教堂附属于圣保禄学院。该学院于1594 年成立，1762年结束，是远东地区第一所西式大学。1835年一场大火烧毁了圣保禄学院及其附属的教堂，仅剩下教堂的正面前壁、大部分地基以及教堂前的石阶。自此，这便成为世界闻名的圣保禄教堂遗址。本地人因教堂前壁形似中国传统牌坊，将之称为大三巴牌坊。这座中西合璧的石壁在全世界的天主教教堂中是独一无二的。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsv38tlue1j20ci08cmzz.jpg",
-        "coordinates": [1200, 700],
+        "coordinates": [450, 2470],
         "subname": "",
         "relatedLocations": [
             {
@@ -24,7 +24,7 @@ var siteData = {
         "openingHours": "上午7时至晚上7时",
         "description": "大炮台创建于1617年，至1626年建成，名为圣保禄炮台，澳门居民多称为“大炮台”。炮台占地约一万平方米，呈不规则四边形，是当时澳门防御系统的核心，构成一个覆盖东西海岸的宽大炮火防卫网。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkjavz8hj20cl08cdkt.jpg",
-        "coordinates": [1200, 800],
+        "coordinates": [580, 2500],
         "subname": "",
         "relatedLocations": [
             {
@@ -271,7 +271,7 @@ var siteData = {
         "openingHours": "",
         "description": "澳门在大街小巷中都可以找到很多手信店。澳门有很多必买的小吃和手信礼品，而其中最受欢迎的非杏仁饼莫属。氹仔官也街上聚集了澳门大部份的杏仁饼店，有些还是即时制造的，保证新鲜美味，绝对是馈赠亲友的最佳礼品。你亦可以在澳门威尼斯人及金沙城中心找到知名的饼店，一次过满足你的购物需要。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlb5e57mj20eu08cjte.jpg",
-        "coordinates": [1100, 700],
+        "coordinates": [550, 1390],
         "subname": "",
         "relatedLocations": [
             {
@@ -328,7 +328,7 @@ var siteData = {
         "openingHours": "",
         "description": "作为澳门最大型的室内购物商场，澳门金沙购物城邦提供超过850间免税品牌商铺，为您带来非凡的购物体验。从拥有高端奢华品牌的四季名店、汇聚世界知名大众品牌的威尼斯人购物中心、到全新开幕的巴黎人购物中心带来最新的创意时尚潮流，以至适合家庭顾客的金沙广场，应有尽有的澳门金沙购物城邦是您享受室内购物体验的最佳目的地。<br>无论是最新的潮流时尚或是顶级设计师品牌，澳门金沙购物城邦都能满足您一切所需。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlgymzssj20ci08cq7i.jpg",
-        "coordinates": [1300, 600],
+        "coordinates": [770, 1060],
         "subname": "",
         "relatedLocations": [
             {
@@ -347,7 +347,7 @@ var siteData = {
         "openingHours": "",
         "description": "全球首个由玩家主导的室内主题乐园Planet J冒险王国，是澳门本土第一个主题乐园。乐园占地100,000平方呎，由8个不同的主题园区组成，拥有超过200种互动游戏装置。Planet J冒险王国打破传统主题乐园营运模式，让玩家能参与冒险游戏的创作，推动故事向前发展。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvll0ldm4j20ci08cjwi.jpg",
-        "coordinates": [1300, 900],
+        "coordinates": [1060, 1195],
         "subname": "",
         "relatedLocations": [
             {
@@ -423,7 +423,7 @@ var siteData = {
         "openingHours": "",
         "description": "英国人Andrew Stow於1989年9月15日在一个他喜爱的小村落:路环半岛，开设了这家谦卑的安德鲁饼店。当地人当时没有吃面包的习惯，不过他们迅速地爱上他的欧式产品。<br>安德鲁的理念是确保他的产品总是新鲜的，健康的，天然的和最佳的。他拒绝用，在其它面包店内十分普遍的添加剂和防腐剂。後来，安德鲁决定加入一款特别美食。<br>在80年代後期的一次葡萄牙旅程中，安德鲁认识了当地的葡挞(1837年在里斯本贝伦起源的一种蛋挞)。安德鲁也想为他的顾客制作葡式蛋挞，但他并没有食谱。他的医药背景使他对实验工作一点也不陌生，安德鲁因此创出了他自己的版本。他省去了一些传统的方法和配料，并引入英式的格调。安德鲁就这样创出了自己独特的配方，从此人们认识的”葡式蛋挞”就被引入亚洲。<br>安德鲁饼店突然因为这一款美食 : 安德鲁蛋挞 ,而变得着名。新闻记者及媒体等开始介绍安德鲁及他的小面包店，亦成为澳门旅游景点之一。安德鲁始创的蛋挞配方在澳门以外的地域变得众所周知，吸引了忠实的追随者，并成了一个显然的出口商品，几乎成了澳门的地标之一。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlvsm0soj20cj08cn11.jpg",
-        "coordinates": [1100, 800],
+        "coordinates": [760, 560],
         "subname": "",
         "relatedLocations": [
             {
@@ -480,7 +480,7 @@ var siteData = {
         "openingHours": "",
         "description": "高水准的澳门格兰披治大赛车举办至今已达六十年历史，可说是澳门最大型的国际性赛事。格兰披治大赛包括摩托车、超级房车和三级方程式赛车等精彩的赛车项目，参赛车辆环绕澳门街道构成的东望洋跑道飞驰。预赛及赛车期间，旅客络绎不绝，全城洋溢着兴奋和紧张刺激的气氛，街道上引擎的轰鸣声此起彼落、彩色广告旗帜飘扬。大赛车期间城市的生活节奏仿佛随着赛车速度飞驰。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvm0na6k4j20ci08cwff.jpg",
-        "coordinates": [1000, 900],
+        "coordinates": [760, 2365],
         "subname": "",
         "relatedLocations": [
             {
@@ -499,7 +499,7 @@ var siteData = {
         "openingHours": "",
         "description": "每年九月中旬至十月初，澳门都会举办精彩的国际烟花比赛汇演，吸引来自中国、菲律宾、泰国、中国台湾、日本、韩国、澳洲、英国、瑞士、法国、德国、葡萄牙及西班牙等国家和地区的高水准烟火公司参加。参赛队伍以烟花配上音乐演出，增强效果和气氛。比赛汇演于澳门旅游塔对开海面举行，观众可在不同的晚上欣赏到各地队伍燃放的璀璨烟花，五彩缤纷、景象万千，让游程更添难忘回忆。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvm1ysgcyj20ck08c0ul.jpg",
-        "coordinates": [1000, 900],
+        "coordinates": [320, 1830],
         "subname": "",
         "relatedLocations": [
             {
