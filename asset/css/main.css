@@ -677,6 +677,7 @@ a {
 }
 
 .fB,
+.oML,
 .MO,
 .cBC {
     display: none;
@@ -734,7 +735,10 @@ a {
         text-align: center;
         cursor: pointer;
     }
-    /* mobile filter overlay */
+    .menu-open .oML,
+    .menu-open .fB {
+        display: none;
+    }
     .MO {
         position: absolute;
         z-index: 1030;

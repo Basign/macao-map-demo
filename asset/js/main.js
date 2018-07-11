@@ -28,12 +28,29 @@ function MenuList() {
     var self = this;
     this.currentFeatureCoordinates = [];
 
-    $(document).on('click', '.ml>.tB, .cBC>img', function () {
+    $(document).on('click', '.ml>.tB, .cBC>img, .oML', function () {
         if ($('.ml').hasClass('menu-open')) {
             $('.ml').removeClass('menu-open open1 open2');
         } else {
             $('.ml').addClass('menu-open open1');
         }
+    });
+
+    $(document).on('click', '.fB', function () {
+        $('.oML, .fB').hide();
+        $('.MO').show();
+    });
+
+    $(document).on('click', '.cMO', function () {
+        $('.oML, .fB').show();
+        $('.MO').hide();
+    });
+
+    $(document).on('click', '.MOL', function () {
+        var $this = $(this);
+        var layerIndex = $this.index();
+        $('.ol-feature-filter>button').eq(layerIndex).trigger('click');
+        $('.cMO').trigger('click');
     });
 
     // menuList 一级菜单
