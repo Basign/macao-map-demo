@@ -690,7 +690,16 @@ a {
     background: 100% 100% no-repeat url('../img/filter.svg');
 }
 
+.oMLi {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: -22px;
+    background: 100% 100% no-repeat url('../img/menu.svg');
+}
+
 @media screen and (max-width:414px) {
+    .tB,
     .ol-zoom,
     .ol-feature-filter,
     .p1 {
@@ -698,13 +707,6 @@ a {
     }
     .p1M {
         display: block;
-    }
-    .tB {
-        position: fixed;
-        top: auto;
-        bottom: 67px;
-        right: 75px;
-        border-radius: 22.5px;
     }
     .menu-open .tBi {
         background: 100% 100% no-repeat url('../img/menu.svg');
@@ -714,7 +716,17 @@ a {
         position: fixed;
         right: 15px;
         bottom: 67px;
-        right: 16px;
+        width: 45px;
+        height: 45px;
+        border-radius: 22.5px;
+        background-color: #ffffff;
+        text-align: center;
+    }
+    .oML {
+        display: block;
+        position: fixed;
+        right: 75px;
+        bottom: 67px;
         width: 45px;
         height: 45px;
         border-radius: 22.5px;
