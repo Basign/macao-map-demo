@@ -213,6 +213,7 @@ a {
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .pnt {
@@ -722,6 +723,7 @@ a {
         border-radius: 22.5px;
         background-color: #ffffff;
         text-align: center;
+        cursor: pointer;
     }
     .oML {
         display: block;
@@ -764,6 +766,7 @@ a {
     }
     .MOL {
         margin-top: 15px;
+        cursor: pointer;
     }
     .MOLT {
         font-size: 15px;
@@ -783,6 +786,7 @@ a {
         position: absolute;
         bottom: 15px;
         right: 15px;
+        cursor: pointer;
     }
     .MOLIC img {
         width: 24px;
@@ -812,6 +816,7 @@ a {
     }
     .cBC>img {
         float: right;
+        cursor: pointer;
     }
 }
 
