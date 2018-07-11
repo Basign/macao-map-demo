@@ -112,7 +112,7 @@ MenuList.prototype.initLocationDetail = function (obj) {
     $('.lC').html(tempHtml);
 
     // 修改 open 状态
-    $('.ml').addClass('menu-open open2');
+    $('.ml').addClass('menu-open open1 open2');
 
     // 记录当前点击 feature 坐标，为 findOnMap() 确定位置
     this.currentFeatureCoordinates = obj.coordinates;
@@ -412,7 +412,7 @@ mapData.layers = {
 mapData.layers.setAllLayerSource();
 
 // map 参数
-var extent = [0, 0, 2574, 1416];
+var extent = [0, 0, 2116, 3204];
 var projection = new ol.proj.Projection({
     code: 'macao-001',
     units: 'pixels',
@@ -420,8 +420,8 @@ var projection = new ol.proj.Projection({
 });
 var backgroundLayer = new ol.layer.Image({
     source: new ol.source.ImageStatic({
-        // TODO
-        url: 'https://ws1.sinaimg.cn/large/9130c6a9gy1fq9zf1bhwnj21zi13chdt.jpg',
+        // 背景底图 background image
+        url: 'https://ws1.sinaimg.cn/large/9130c6a9gy1ft5ngnh7m0j22kg3vz1kx.jpg',
         projection: projection,
         imageExtent: extent
     })
