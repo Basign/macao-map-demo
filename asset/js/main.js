@@ -146,6 +146,7 @@ MenuList.prototype.initLocationDetail = function (obj) {
 var menuList = new MenuList();
 
 function triggerInitLocationDetail(id) {
+    $(element).popover('destroy');
     menuList.initLocationDetail(siteData[id]);
 }
 
@@ -342,20 +343,20 @@ mapData.features = {
                 })
             },
             // TODO 大赛车博物馆
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['7'].coordinates),
-                    siteId: '7'
-                }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/Pu2css.png'
-                    }))
-                })
-            },
+            // {
+            //     feature: new ol.Feature({
+            //         geometry: new ol.geom.Point(siteData['7'].coordinates),
+            //         siteId: '7'
+            //     }),
+            //     style: new ol.style.Style({
+            //         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+            //             anchor: [0.5, 1],
+            //             anchorXUnits: 'fraction',
+            //             anchorYUnits: 'fraction',
+            //             src: 'https://s1.ax1x.com/2018/07/12/Pu2css.png'
+            //         }))
+            //     })
+            // },
             // 渔人码头
             {
                 feature: new ol.Feature({
@@ -402,20 +403,20 @@ mapData.features = {
                 })
             },
             // TODO 妈阁庙
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['11'].coordinates),
-                    siteId: '11'
-                }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/Pu2zWD.png'
-                    }))
-                })
-            },
+            // {
+            //     feature: new ol.Feature({
+            //         geometry: new ol.geom.Point(siteData['11'].coordinates),
+            //         siteId: '11'
+            //     }),
+            //     style: new ol.style.Style({
+            //         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+            //             anchor: [0.5, 1],
+            //             anchorXUnits: 'fraction',
+            //             anchorYUnits: 'fraction',
+            //             src: 'https://s1.ax1x.com/2018/07/12/Pu2zWD.png'
+            //         }))
+            //     })
+            // },
             // 旅游塔
             {
                 feature: new ol.Feature({
@@ -538,6 +539,21 @@ mapData.features = {
             }
         ],
         food: [
+            // 官也街
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['14'].coordinates),
+                    siteId: '14'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/PufwIx.png'
+                    }))
+                })
+            },
             // 杏仁饼
             {
                 feature: new ol.Feature({
@@ -618,20 +634,20 @@ mapData.features = {
         ],
         holiday: [
             // 澳门光影节
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['19'].coordinates),
-                    siteId: '25'
-                }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
-                    }))
-                })
-            },
+            // {
+            //     feature: new ol.Feature({
+            //         geometry: new ol.geom.Point(siteData['19'].coordinates),
+            //         siteId: '25'
+            //     }),
+            //     style: new ol.style.Style({
+            //         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+            //             anchor: [0.5, 1],
+            //             anchorXUnits: 'fraction',
+            //             anchorYUnits: 'fraction',
+            //             src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
+            //         }))
+            //     })
+            // },
             // 澳门格兰披治大赛车
             {
                 feature: new ol.Feature({
@@ -806,6 +822,7 @@ function mapClick(evt) {
                 '                   <p class="popup-inner-text-subtitle">' + siteData[feature.get('siteId')].subname + '</p>' +
                 '               </div>' +
                 '               <img src="asset/img/right.svg" alt="show-detail" class="popup-inner-right-arrow">' +
+                '               <div class="CF"></div>' +
                 '           </div>' +
                 '       </a>'
         });

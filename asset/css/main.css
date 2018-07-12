@@ -45,6 +45,10 @@ a {
     display: none;
 }
 
+.CF {
+    clear: both;
+}
+
 /* ------------------------------ atomic class end ------------------------------ */
 
 .C {
@@ -614,7 +618,6 @@ a {
 .popup-inner {
     width: 240px;
     padding: 2px 5px;
-    overflow: hidden;
 }
 
 .popup-inner-img-container {
