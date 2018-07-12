@@ -7,16 +7,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsv38tlue1j20ci08cmzz.jpg",
         "coordinates": [450, 2470],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街2"
-            }
-        ]
+        "relatedLocations": [2, 3]
     },
     "2": {
         "name": "大炮台",
@@ -26,16 +17,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkjavz8hj20cl08cdkt.jpg",
         "coordinates": [580, 2500],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街3"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街4"
-            }
-        ]
+        "relatedLocations": [4, 5]
     },
     "3": {
         "name": "澳门博物馆",
@@ -45,16 +27,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkmbyfdoj20eu08ctan.jpg",
         "coordinates": [550, 2635],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街3"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街4"
-            }
-        ]
+        "relatedLocations": [6, 7]
     },
     "4": {
         "name": "议事亭前地",
@@ -64,16 +37,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvknvcktoj20cj08cgq4.jpg",
         "coordinates": [515, 2345],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街3"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街4"
-            }
-        ]
+        "relatedLocations": [8, 9]
     },
     "5": {
         "name": "玫瑰堂",
@@ -83,16 +47,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkphcbpkj20ck08cjxg.jpg",
         "coordinates": [375, 2385],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街3"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街4"
-            }
-        ]
+        "relatedLocations": [10, 11]
     },
     "6": {
         "name": "东望洋炮台",
@@ -102,16 +57,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkphcbpkj20ck08cjxg.jpg",
         "coordinates": [685, 2415],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街3"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街4"
-            }
-        ]
+        "relatedLocations": [12, 13]
     },
     "7": {
         "name": "大赛车博物馆",
@@ -121,16 +67,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkphcbpkj20ck08cjxg.jpg",
         "coordinates": [1200, 800],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街3"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街4"
-            }
-        ]
+        "relatedLocations": [14, 15]
     },
     "8": {
         "name": "澳门渔人码头",
@@ -140,16 +77,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvktjp7jqj20ct08cq77.jpg",
         "coordinates": [770, 2200],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街3"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街4"
-            }
-        ]
+        "relatedLocations": [16, 17]
     },
     "9": {
         "name": "澳门科学馆",
@@ -159,16 +87,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkvc3k8rj20ck08cq65.jpg",
         "coordinates": [845, 2120],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街3"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街4"
-            }
-        ]
+        "relatedLocations": [18, 19]
     },
     "10": {
         "name": "郑家大屋",
@@ -178,16 +97,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkvc3k8rj20ck08cq65.jpg",
         "coordinates": [255, 2285],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街3"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街4"
-            }
-        ]
+        "relatedLocations": [20, 21]
     },
     "11": {
         "name": "妈阁庙",
@@ -197,16 +107,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvl3ij43xj20ci08cjyy.jpg",
         "coordinates": [1200, 800],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街3"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街4"
-            }
-        ]
+        "relatedLocations": [22, 23]
     },
     "12": {
         "name": "澳门旅游塔",
@@ -216,16 +117,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvl40pgsij20ci08cjut.jpg",
         "coordinates": [375, 1945],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街3"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街4"
-            }
-        ]
+        "relatedLocations": [24, 25]
     },
     "13": {
         "name": "龙环葡韵",
@@ -235,16 +127,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvl5z9qt0j20ci08cjtr.jpg",
         "coordinates": [830, 1435],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街3"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街4"
-            }
-        ]
+        "relatedLocations": [26, 27]
     },
     "14": {
         "name": "官也街",
@@ -254,16 +137,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvl8qwawsj20ci08c0ub.jpg",
         "coordinates": [660, 1325],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街3"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街4"
-            }
-        ]
+        "relatedLocations": [1, 2]
     },
     "15": {
         "name": "杏仁饼",
@@ -273,16 +147,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlb5e57mj20eu08cjte.jpg",
         "coordinates": [550, 1390],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街5"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街6"
-            }
-        ]
+        "relatedLocations": [3, 4]
     },
     "16": {
         "name": "澳门威尼斯人 - 大运河",
@@ -292,16 +157,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlda4g6nj20ci08cmyt.jpg",
         "coordinates": [900, 1140],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街5"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街6"
-            }
-        ]
+        "relatedLocations": [5, 6]
     },
     "17": {
         "name": "澳门巴黎人 - 巴黎铁塔，爱情锁桥",
@@ -311,16 +167,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlfpqbpuj20ci08cjvc.jpg",
         "coordinates": [945, 970],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街5"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街6"
-            }
-        ]
+        "relatedLocations": [7, 8]
     },
     "18": {
         "name": "澳门金沙购物城邦广场",
@@ -330,16 +177,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlgymzssj20ci08cq7i.jpg",
         "coordinates": [770, 1060],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街5"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街6"
-            }
-        ]
+        "relatedLocations": [9, 10]
     },
     "19": {
         "name": "PLANET J 冒险王国主题公园",
@@ -349,16 +187,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvll0ldm4j20ci08cjwi.jpg",
         "coordinates": [1060, 1195],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街5"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街6"
-            }
-        ]
+        "relatedLocations": [11, 12]
     },
     "20": {
         "name": "金光综艺馆 - 顶级明星演唱会聚集地",
@@ -366,18 +195,9 @@ var siteData = {
         "openingHours": "",
         "description": "澳门最佳演唱会及表演场地。金光综艺馆为一多功能室内表演场地，是您活动场地的理想选择。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlq61y5bj20ci08cmzs.jpg",
-        "coordinates": [900,1140],
+        "coordinates": [900, 1140],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街5"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街6"
-            }
-        ]
+        "relatedLocations": [13, 14]
     },
     "21": {
         "name": "澳门大熊猫馆",
@@ -387,16 +207,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlt2z221j20ci08cjrv.jpg",
         "coordinates": [1050, 615],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街5"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街6"
-            }
-        ]
+        "relatedLocations": [15, 16]
     },
     "22": {
         "name": "路环圣方济各圣堂",
@@ -406,16 +217,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlugwd4hj20ci08cmxf.jpg",
         "coordinates": [945, 315],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街5"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街6"
-            }
-        ]
+        "relatedLocations": [17, 18]
     },
     "23": {
         "name": "葡式蛋挞",
@@ -425,16 +227,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlvsm0soj20cj08cn11.jpg",
         "coordinates": [760, 560],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街5"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街6"
-            }
-        ]
+        "relatedLocations": [19, 20]
     },
     "24": {
         "name": "黑沙海滩",
@@ -444,16 +237,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlyjx2xdj20ci0irmxn.jpg",
         "coordinates": [1685, 655],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街5"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街6"
-            }
-        ]
+        "relatedLocations": [21, 22]
     },
     "25": {
         "name": "澳门光影节",
@@ -463,16 +247,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlzkdrnij20ci08cwex.jpg",
         "coordinates": [1000, 600],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街5"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街6"
-            }
-        ]
+        "relatedLocations": [23, 24]
     },
     "26": {
         "name": "澳门格兰披治大赛车",
@@ -482,16 +257,7 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvm0na6k4j20ci08cwff.jpg",
         "coordinates": [760, 2365],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街5"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街6"
-            }
-        ]
+        "relatedLocations": [23, 22]
     },
     "27": {
         "name": "澳门国际烟花比赛汇演",
@@ -501,15 +267,6 @@ var siteData = {
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvm1ysgcyj20ck08c0ul.jpg",
         "coordinates": [320, 1830],
         "subname": "",
-        "relatedLocations": [
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街5"
-            },
-            {
-                "image": "http://via.placeholder.com/400x300",
-                "name": "管也街6"
-            }
-        ]
+        "relatedLocations": [21, 20]
     }
 };

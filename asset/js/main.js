@@ -101,6 +101,11 @@ function MenuList() {
         $('.tB').trigger('click');
         map.getView().animate({ center: self.currentFeatureCoordinates }, { resolution: 0.5 });
     });
+
+    $(document).on('click', '.lCiW', function () {
+        var id = $(this).data('site-id');
+        triggerInitLocationDetail(id);
+    });
 }
 
 // 点击兴趣点, 展开详情
@@ -118,13 +123,16 @@ MenuList.prototype.initLocationDetail = function (obj) {
     $('.site-description').html(obj.description);
 
     var tempHtml = '';
-    for (loc of obj.relatedLocations) {
-        tempHtml += '<div class="bxi">' +
-            '          <div>' +
-            '            <img src="' + loc.image + '" alt="related-locations">' +
-            '          </div>' +
-            '          <span>' + loc.name + '</span>' +
-            '        </div>';
+    var relatedlocationLength = obj.relatedLocations.length;
+    for (var i = 0; i < relatedlocationLength; i++) {
+        var relatedLocationId = obj.relatedLocations[i];
+        var relatedLocation = siteData[relatedLocationId];
+        tempHtml += '\
+             <div class="lCi">' +
+            '  <div data-site-id="' + relatedLocationId + '" class="lCiW" style="background:no-repeat center / cover url(' + relatedLocation.image + ')">' +
+            '  </div>' +
+            '  <span class="lCt">' + relatedLocation.name + '</span>' +
+            '</div>';
     }
     $('.lC').html(tempHtml);
 
