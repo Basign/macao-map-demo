@@ -272,6 +272,261 @@ mapData.features = {
                         src: 'https://s1.ax1x.com/2018/07/11/PuwPpt.png'
                     }))
                 })
+            },
+            // 博物馆
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['3'].coordinates),
+                    siteId: '3'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/Pu2wIf.png'
+                    }))
+                })
+            },
+            // 议事亭前地
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['4'].coordinates),
+                    siteId: '4'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/Pu2Bi8.png'
+                    }))
+                })
+            },
+            // 玫瑰堂
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['5'].coordinates),
+                    siteId: '5'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/Pu2rRg.png'
+                    }))
+                })
+            },
+            // 东望洋炮台
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['6'].coordinates),
+                    siteId: '6'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/Pu2css.png'
+                    }))
+                })
+            },
+            // TODO 大赛车博物馆
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['7'].coordinates),
+                    siteId: '7'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/Pu2css.png'
+                    }))
+                })
+            },
+            // 渔人码头
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['8'].coordinates),
+                    siteId: '8'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/Pu2Odx.png'
+                    }))
+                })
+            },
+            // 科学馆
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['9'].coordinates),
+                    siteId: '9'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/Pu2xJO.png'
+                    }))
+                })
+            },
+            // 郑家大屋
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['10'].coordinates),
+                    siteId: '10'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/Pu2zWD.png'
+                    }))
+                })
+            },
+            // TODO 妈阁庙
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['11'].coordinates),
+                    siteId: '11'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/Pu2zWD.png'
+                    }))
+                })
+            },
+            // 旅游塔
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['12'].coordinates),
+                    siteId: '12'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/PuRATP.png'
+                    }))
+                })
+            },
+            // 龙环葡韵
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['13'].coordinates),
+                    siteId: '13'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/PuRefS.png'
+                    }))
+                })
+            },
+            // 官也街
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['14'].coordinates),
+                    siteId: '14'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/PufwIx.png'
+                    }))
+                })
+            },
+            // 威尼斯人
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['16'].coordinates),
+                    siteId: '16'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/PuR21e.png'
+                    }))
+                })
+            },
+            // 巴黎人
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['17'].coordinates),
+                    siteId: '17'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/PuR57t.png'
+                    }))
+                })
+            },
+            // 大熊猫馆
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['21'].coordinates),
+                    siteId: '21'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/PuWnN6.png'
+                    }))
+                })
+            },
+            // 圣方济各圣堂
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['22'].coordinates),
+                    siteId: '22'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/PuW1jH.png'
+                    }))
+                })
+            },
+            // 黑沙海滩
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['24'].coordinates),
+                    siteId: '24'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: 'https://s1.ax1x.com/2018/07/12/PufSrd.png'
+                    }))
+                })
             }
         ],
         food: [
@@ -322,7 +577,7 @@ mapData.features = {
                     }))
                 })
             },
-            // 家庭儿童娱乐
+            // TODO 家庭儿童娱乐
             {
                 feature: new ol.Feature({
                     geometry: new ol.geom.Point(siteData['19'].coordinates),
@@ -334,6 +589,21 @@ mapData.features = {
                         anchorXUnits: 'pixels',
                         anchorYUnits: 'pixels',
                         src: 'https://s1.ax1x.com/2018/07/11/Pu0LZD.png'
+                    }))
+                })
+            },
+            // 金光综艺馆
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(siteData['20'].coordinates),
+                    siteId: '20'
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+                        anchor: [165, 112],
+                        anchorXUnits: 'pixels',
+                        anchorYUnits: 'pixels',
+                        src: 'https://s1.ax1x.com/2018/07/12/PuR7h8.png'
                     }))
                 })
             }
@@ -484,12 +754,10 @@ var map = new ol.Map({
     view: new ol.View({
         projection: projection,
         center: ol.extent.getCenter(extent),
-        // TODO 根据图片分辨率计算缩放倍数
+        // 缩放倍数
         resolution: 1,
         maxResolution: 4,
         minResolution: 0.5
-        // zoom: 2,
-        // maxZoom: 8
     })
 });
 

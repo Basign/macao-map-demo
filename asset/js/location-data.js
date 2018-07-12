@@ -43,7 +43,7 @@ var siteData = {
         "openingHours": "",
         "description": "澳门博物馆是一间展示澳门历史和多元文化的博物馆，馆内的展品以其丰富和深刻的历史和文化内涵，展示数百年来澳门的历史变迁，讲述来自不同国家、具有不同文化背景的居民在澳门和平共处的生活。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkmbyfdoj20eu08ctan.jpg",
-        "coordinates": [1200, 800],
+        "coordinates": [550, 2635],
         "subname": "",
         "relatedLocations": [
             {
@@ -62,7 +62,7 @@ var siteData = {
         "openingHours": "",
         "description": "本地居民又称此地为“喷水池”。开埠至今议事亭前地一直是澳门的市中心，两侧建筑建于19世纪末20世纪初。1993年，前地一带铺设黑白色碎石地面，并砌成波浪形图案，衬托周围颜色鲜艳的文物建筑，互相辉映，使前地一带显出浓浓的南欧风情。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvknvcktoj20cj08cgq4.jpg",
-        "coordinates": [1200, 800],
+        "coordinates": [515, 2345],
         "subname": "",
         "relatedLocations": [
             {
@@ -81,7 +81,7 @@ var siteData = {
         "openingHours": "上午10时至下午6时",
         "description": "由圣多明我会（道明会）创建于1587年，是该会在中国的第一所教堂。教堂初时用木板搭建，华人称之为“板樟庙”。又因教堂供奉玫瑰圣母，故又称“玫瑰堂”。整座教堂建筑富丽堂皇，其巴洛克建筑风格的祭坛更是典雅精致。教堂旁的“圣物宝库”收藏了三百多件澳门天主教珍贵文物。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkphcbpkj20ck08cjxg.jpg",
-        "coordinates": [1200, 800],
+        "coordinates": [375, 2385],
         "subname": "",
         "relatedLocations": [
             {
@@ -100,7 +100,7 @@ var siteData = {
         "openingHours": "炮台：上午9时至下午6时",
         "description": "东望洋炮台（修筑于1622 年）位于澳门半岛最高峰东望洋山之巅，俯瞰整个半岛，炮台上建有一灯塔及小教堂。东望洋灯塔（建于1864年）是中国海岸第一座现代灯塔，其所在地面位置之座标值亦为澳门于世界地图上之地理定位。<br>灯塔侧的小教堂名为圣母雪地殿（建于1622年），教堂内的拱顶和墙身绘有彩色壁画，其绘画技巧融合中西艺术，是本地众多教堂中独一无二的。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkphcbpkj20ck08cjxg.jpg",
-        "coordinates": [1200, 800],
+        "coordinates": [685, 2415],
         "subname": "",
         "relatedLocations": [
             {
@@ -138,7 +138,7 @@ var siteData = {
         "openingHours": "",
         "description": "澳门渔人码头是澳门首个主题文化创意娱乐旅游综合体。座落于外港新填海区海岸，占地超过133,000平方米，集美食、购物、娱乐和主题公园、住宿及会展设施于一体，结合不同建筑特色及中西文化，务求使游客突破地域界限，体验不同地区的特色。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvktjp7jqj20ct08cq77.jpg",
-        "coordinates": [1200, 800],
+        "coordinates": [770, 2200],
         "subname": "",
         "relatedLocations": [
             {
@@ -157,7 +157,7 @@ var siteData = {
         "openingHours": "",
         "description": "澳门科学馆由建筑大师贝聿铭及贝氏建筑事务所设计，建筑物的整体建筑面积约为20,000平方米，由展览中心、天文馆、会议中心三部分组成。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkvc3k8rj20ck08cq65.jpg",
-        "coordinates": [1200, 800],
+        "coordinates": [845, 2120],
         "subname": "",
         "relatedLocations": [
             {
@@ -176,7 +176,7 @@ var siteData = {
         "openingHours": "",
         "description": "郑家大屋约建于1869年前，是中国近代著名思想家郑观应的故居，是一院落式大宅。建筑虽主要以中国形制构建，但却处处体现中西结合之特色，中式建筑手法主要表现于屋顶、梁架结构、内院中多样的窗户，还有趟拢门等；而受西方或外国影响的则印证于一些室内天花的处理、门楣窗楣的式样、檐口线，以及外墙之抹灰。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkvc3k8rj20ck08cq65.jpg",
-        "coordinates": [1200, 800],
+        "coordinates": [255, 2285],
         "subname": "",
         "relatedLocations": [
             {
@@ -214,7 +214,7 @@ var siteData = {
         "openingHours": "观光层<br>平日: 上午10时至晚上10时<br>周末及公众假期: 上午9时至晚上10时",
         "description": "座落于南湾新填海区，塔高338米的旅游塔，是一个集旅游、观光、表演、会议、展览、购物、餐饮、娱乐及通讯于一体的综合设施。<br>塔楼离地面223米，楼高达四层，包括两层高的观光主层，内有玻璃地面，可从观光层鸟瞰澳门；还有一个可容纳250人的旋转餐厅，视野55公里，让人尽览澳门地区、珠江三角洲和部分香港离岛的景致。旅游塔设有玻璃升降机，由地面至观光主层约45秒左右，乘客感受景物迅速离开自己的脚底，有一飞冲天的感觉。<br>爱刺激的人士，可试试“蹦极跳”、“高飞跳”、“空中漫步X版”及“百步登天”等冒险活动。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvl40pgsij20ci08cjut.jpg",
-        "coordinates": [1200, 800],
+        "coordinates": [375, 1945],
         "subname": "",
         "relatedLocations": [
             {
@@ -233,7 +233,7 @@ var siteData = {
         "openingHours": "上午10时至下午7时，下午6时30分停止入场，逢星期一休息。",
         "description": "“龙环葡韵”是澳门八景之一。“龙环”是氹仔旧称，“葡韵”是指这里葡萄牙建筑风韵，包括海边马路的多座葡式住宅、嘉模教堂、公园等一带如诗似画的迷人景致，其中以五座碧翠凝绿的小型建筑最具代表性。<br>这几座建筑早于1921年落成，曾为高级官员官邸，也是具代表性的土生葡人住宅。1992年，该五座建筑被评为具建筑价值的建筑群。经彻底修复后，政府将之改建成博物馆区，名为“龙环葡韵住宅式博物馆”，自1999年底起对外开放。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvl5z9qt0j20ci08cjtr.jpg",
-        "coordinates": [1200, 800],
+        "coordinates": [830, 1435],
         "subname": "",
         "relatedLocations": [
             {
@@ -252,7 +252,7 @@ var siteData = {
         "openingHours": "",
         "description": "氹仔旧城区是到离岛旅游必到之处，这里云集了各式各样的手信店，有地道小食、传统糕饼及精致摆设等，游客可在此找到合心水的手信送礼自用。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvl8qwawsj20ci08c0ub.jpg",
-        "coordinates": [1200, 800],
+        "coordinates": [660, 1325],
         "subname": "",
         "relatedLocations": [
             {
@@ -290,7 +290,7 @@ var siteData = {
         "openingHours": "",
         "description": "澳门威尼斯人是世界知名的综合度假酒店，更被誉为“全球最佳奢华度假村”。拥有3000间豪华酒店套房，超过350家国际名店，以及评选为米其林星级美食餐厅的皇雀印度餐厅，而独具特色的街头表演更是令人惊叹不已，当然还有不容错过的贡多拉之旅，泛舟运河感受威尼斯的浪漫风情。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlda4g6nj20ci08cmyt.jpg",
-        "coordinates": [1100, 700],
+        "coordinates": [900, 1140],
         "subname": "",
         "relatedLocations": [
             {
@@ -309,7 +309,7 @@ var siteData = {
         "openingHours": "",
         "description": "澳门巴黎人是全澳门乃至亚洲的一颗闪耀新星，您可以在此感受“光之城”巴黎的独特艺术气息与迷人魅力。这里有约3,000间法式客房及套房供您选择，还有依照巴黎埃菲尔铁塔1/2比例建造的巴黎铁塔，让您体验独一无二的浪漫风情。您还可以于170家精品名店享受购物乐趣，或是品尝经典法式美食，欣赏精彩的娱乐表演，畅游水世界、儿童王国等各种娱乐项目……像巴黎人一样体验无处不在的浪漫与惊喜！",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlfpqbpuj20ci08cjvc.jpg",
-        "coordinates": [1100, 700],
+        "coordinates": [945, 970],
         "subname": "",
         "relatedLocations": [
             {
@@ -366,7 +366,7 @@ var siteData = {
         "openingHours": "",
         "description": "澳门最佳演唱会及表演场地。金光综艺馆为一多功能室内表演场地，是您活动场地的理想选择。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlq61y5bj20ci08cmzs.jpg",
-        "coordinates": [1300, 900],
+        "coordinates": [900,1140],
         "subname": "",
         "relatedLocations": [
             {
@@ -385,7 +385,7 @@ var siteData = {
         "openingHours": "",
         "description": "澳门大熊猫馆位于路环石排湾郊野公园内，建筑占地约3000平方米，整个建筑利用现有的地形结合建筑的特性进行设计，依山而建，呈扇形的分布。<br>大熊猫馆的外观造型设计以仿自然为主，活动场的围墙以仿山石包裹，营造一个自然山水环绕的大熊猫的活动场地。馆内设有两个面积各约330平方米的室内活动区和一个面积约600平方米的室外活动场，以供大熊猫活动之用。而为了大熊猫的生活需要，馆内还设有大熊猫的后勤中心，包括兽舍、竹子清洗区、竹子储存库、饲料准备室、饲料储存库、监控区和医疗室等…",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlt2z221j20ci08cjrv.jpg",
-        "coordinates": [1300, 900],
+        "coordinates": [1050, 615],
         "subname": "",
         "relatedLocations": [
             {
@@ -404,7 +404,7 @@ var siteData = {
         "openingHours": "",
         "description": "建于1928年，这座小教堂的建筑形式类似澳门一般教堂的巴洛克式建筑。教堂的外墙为白色，椭圆形窗户及一座钟楼，教堂前有一座纪念碑，以纪念当地1910年战胜海盗一役。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlugwd4hj20ci08cmxf.jpg",
-        "coordinates": [1300, 900],
+        "coordinates": [945, 315],
         "subname": "",
         "relatedLocations": [
             {
@@ -442,7 +442,7 @@ var siteData = {
         "openingHours": "",
         "description": "黑沙海滩是澳门最长的海滩，以黑色细沙闻名，不少人士爱到这儿游泳或玩水上活动，也有很多人喜欢到这里漫步海滩，感受海风，品尝海边小贩摊档的烧烤风味。海滩旁边是黑沙公园，内设网球场、游泳池、野餐区、儿童游乐场和餐厅。<br>要数澳门最有名的露天浴场，非黑沙海滩莫属。顾名思义，黑沙海滩的得名正是由于滩岸上满布了黝黑的海沙，成为这海滩最大的特色。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlyjx2xdj20ci0irmxn.jpg",
-        "coordinates": [1100, 800],
+        "coordinates": [1685, 655],
         "subname": "",
         "relatedLocations": [
             {
