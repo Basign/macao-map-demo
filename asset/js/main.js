@@ -1,3 +1,8 @@
+// bug fix hack
+$(function () {
+    $(window).trigger('resize');
+});
+
 (function () {
     // 设置地图容器高度
     var containerHeight = $('.C').offset().top;
@@ -93,11 +98,16 @@ function MenuList() {
     });
 
     $(document).on('click', '.pn>:not(.pnt)', function () {
+        // TODO 收起其他展开, 添加 active 状态
+
         var id = $(this).data('location-id');
         self.initLocationDetail(siteData[id]);
     });
 
     $(document).on('click', '.mlrb', function findOnMap() {
+        // 切换 全部 图层, 以显示所有 feature
+        $('.ol-feature-filter>button').eq(0).trigger('click');
+
         $('.tB').trigger('click');
         map.getView().animate({ center: self.currentFeatureCoordinates }, { resolution: 0.5 });
     });
@@ -105,6 +115,8 @@ function MenuList() {
     $(document).on('click', '.lCiW', function () {
         var id = $(this).data('site-id');
         triggerInitLocationDetail(id);
+
+        // TODO trigger
     });
 }
 
