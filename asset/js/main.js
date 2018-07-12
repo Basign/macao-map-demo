@@ -183,6 +183,7 @@ app.CustomControl = function (opt_options) {
     var options = opt_options || {};
 
     var this_ = this;
+    var currentLayerIndex = 0;
 
     var filterAll = document.createElement('button');
     filterAll.innerHTML = '<img src="asset/img/all.svg" alt="filter-all">';
@@ -204,6 +205,8 @@ app.CustomControl = function (opt_options) {
 
     // 全部
     function changeFilterAll() {
+        this_.currentLayerIndex = 0;
+
         this_.getMap().setLayerGroup(new ol.layer.Group({
             layers: [backgroundLayer,
                 mapData.layers.layersDict['viewSpot'],
@@ -217,6 +220,11 @@ app.CustomControl = function (opt_options) {
 
     // 观光景点
     function changeFilterViewSpot() {
+        if (this_.currentLayerIndex !== 1) {
+            $('#popup').popover('destroy');
+        }
+        this_.currentLayerIndex = 1;
+
         this_.getMap().setLayerGroup(new ol.layer.Group({
             layers: [backgroundLayer, mapData.layers.layersDict['viewSpot']]
         }));
@@ -226,6 +234,11 @@ app.CustomControl = function (opt_options) {
 
     // 美食
     function changeFilterFood() {
+        if (this_.currentLayerIndex !== 2) {
+            $('#popup').popover('destroy');
+        }
+        this_.currentLayerIndex = 2;
+
         this_.getMap().setLayerGroup(new ol.layer.Group({
             layers: [backgroundLayer, mapData.layers.layersDict['food']]
         }));
@@ -235,6 +248,11 @@ app.CustomControl = function (opt_options) {
 
     // 娱乐活动
     function changeFilterEntertainment() {
+        if (this_.currentLayerIndex !== 3) {
+            $('#popup').popover('destroy');
+        }
+        this_.currentLayerIndex = 3;
+
         this_.getMap().setLayerGroup(new ol.layer.Group({
             layers: [backgroundLayer, mapData.layers.layersDict['entertainment']]
         }));
@@ -244,6 +262,11 @@ app.CustomControl = function (opt_options) {
 
     // 节日盛事
     function changeFilterHoliday() {
+        if (this_.currentLayerIndex !== 4) {
+            $('#popup').popover('destroy');
+        }
+        this_.currentLayerIndex = 4;
+
         this_.getMap().setLayerGroup(new ol.layer.Group({
             layers: [backgroundLayer, mapData.layers.layersDict['holiday']]
         }));
