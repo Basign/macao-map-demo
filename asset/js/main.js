@@ -72,9 +72,9 @@ function MenuList() {
         }
 
         // 切换图层
-        var $this = $(this);
-        var layerIndex = $this.parent().index();
-        $('.ol-feature-filter>button').eq(layerIndex + 1).trigger('click');
+        // var $this = $(this);
+        // var layerIndex = $this.parent().index();
+        // $('.ol-feature-filter>button').eq(layerIndex + 1).trigger('click');
     });
 
     $(document).on('click', '.mlri>.close', function () {
