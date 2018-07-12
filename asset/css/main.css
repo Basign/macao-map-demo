@@ -377,9 +377,10 @@ a {
     text-align: center;
 }
 
-.tg a {
+.tgI {
     font-size: 12px;
     color: #83bfec;
+    cursor: pointer;
 }
 
 .mlrc,

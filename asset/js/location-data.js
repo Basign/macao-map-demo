@@ -6,7 +6,7 @@ var siteData = {
         "description": "大三巴牌坊是天主之母教堂（即圣保禄教堂）正面前壁的遗址。</br>圣保禄教堂附属于圣保禄学院。该学院于1594 年成立，1762年结束，是远东地区第一所西式大学。1835年一场大火烧毁了圣保禄学院及其附属的教堂，仅剩下教堂的正面前壁、大部分地基以及教堂前的石阶。自此，这便成为世界闻名的圣保禄教堂遗址。本地人因教堂前壁形似中国传统牌坊，将之称为大三巴牌坊。这座中西合璧的石壁在全世界的天主教教堂中是独一无二的。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsv38tlue1j20ci08cmzz.jpg",
         "coordinates": [450, 2470],
-        "subname": "",
+        "subname": "圣保禄大教堂遗址",
         "relatedLocations": [2, 3]
     },
     "2": {
@@ -16,7 +16,7 @@ var siteData = {
         "description": "大炮台创建于1617年，至1626年建成，名为圣保禄炮台，澳门居民多称为“大炮台”。炮台占地约一万平方米，呈不规则四边形，是当时澳门防御系统的核心，构成一个覆盖东西海岸的宽大炮火防卫网。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkjavz8hj20cl08cdkt.jpg",
         "coordinates": [580, 2500],
-        "subname": "",
+        "subname": "中国现存最古老的西式炮台",
         "relatedLocations": [4, 5]
     },
     "3": {

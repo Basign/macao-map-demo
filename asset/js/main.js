@@ -95,13 +95,13 @@ function MenuList() {
         $('.ml').removeClass('open2');
     });
 
-    $(document).on('click', '.mlrc>.tg', function () {
+    $(document).on('click', '.tgI', function () {
         if ($(this).hasClass('text-open')) {
             $('.sdC').css('max-height', '90px');
-            $(this).children().html('展开');
+            $(this).html('展开');
         } else {
             $('.sdC').css('max-height', 'unset');
-            $(this).children().html('收起');
+            $(this).html('收起');
         }
         $(this).toggleClass('text-open');
     });
