@@ -31,9 +31,9 @@ function Popup() {
         $('.pC>.pp').toggleClass('open');
     }
 
-    $(document).on('click', '.pC>.p1', togglePopup);
+    $(document).on('click', '.p1', togglePopup);
 
-    $(document).on('click', '.pC>.pp .close', togglePopup);
+    $(document).on('click', '.clspp', togglePopup);
 }
 
 var popup = new Popup();
@@ -91,7 +91,7 @@ function MenuList() {
         // $('.ol-feature-filter>button').eq(layerIndex + 1).trigger('click');
     });
 
-    $(document).on('click', '.mlri>.close', function () {
+    $(document).on('click', '.mlri>.cls', function () {
         $('.ml').removeClass('open2');
     });
 

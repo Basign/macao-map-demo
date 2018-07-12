@@ -1,8 +1,3 @@
-body {
-    font-size: 14px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
-}
-
 div {
     box-sizing: border-box;
 }
@@ -53,6 +48,8 @@ a {
 
 .C {
     position: relative;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
 }
 
 /* ------------------------------ popup ------------------------------ */
@@ -79,25 +76,35 @@ a {
     transform: translateY(-282px);
 }
 
-.pp button {
-    /* #color gold */
+.rese {
+    display: inline-block;
+    width: 160px;
+    height: 36px;
+    line-height: 35px;
     background-color: #bd9e58;
     color: #ffffff;
     border: 0;
     cursor: pointer;
 }
 
-.pp .close {
+.clspp {
     position: absolute;
     left: -12px;
     top: -12px;
     height: 36px;
     width: 36px;
     border-radius: 50%;
+    background-color: #bd9e58;
+    color: #ffffff;
+    cursor: pointer;
 }
 
-.pp .close img {
-    vertical-align: -2px;
+.clspp img {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
 }
 
 .p1 {
@@ -130,14 +137,8 @@ a {
 }
 
 .p2l p {
-    /* #color blue */
     color: #526483;
     margin-bottom: 20px;
-}
-
-.p2l .button {
-    height: 36px;
-    width: 160px;
 }
 
 .p2r img {
@@ -178,10 +179,12 @@ a {
 }
 
 .tBi {
-    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     width: 24px;
     height: 24px;
-    vertical-align: -22px;
+    margin: 0 auto;
     background: 100% 100% no-repeat url('../img/menu.svg');
 }
 
@@ -279,7 +282,7 @@ a {
     width: 100%;
 }
 
-.mlri>.close {
+.mlri>.cls {
     z-index: 1;
     position: absolute;
     top: 18px;
@@ -292,8 +295,12 @@ a {
     cursor: pointer;
 }
 
-.mlri>.close img {
-    vertical-align: -3px;
+.mlri>.cls img {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
 }
 
 .mlrt {
