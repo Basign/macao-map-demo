@@ -725,7 +725,13 @@ mapData.features = {
         ]
     },
     setFeatureStyle: function (feature, style) {
-        feature.setStyle(style);
+        feature.setStyle(
+            function (feature, resolution) {
+                var defaultResolution = 1; // map.View 缩放倍数
+                style.getImage().setScale(defaultResolution / resolution);
+                return style;
+            }
+        );
         return feature;
     },
     featuresDict: {},
@@ -769,7 +775,9 @@ mapData.layers = {
         var keys = mapData.features.data;
         function setLayerSource(source) {
             return new ol.layer.Vector({
-                source: source
+                source: source,
+                updateWhileAnimating: true,
+                updateWhileInteracting: true
             });
         }
 
