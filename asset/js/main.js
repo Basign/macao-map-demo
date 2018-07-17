@@ -133,15 +133,20 @@ function MenuList() {
 MenuList.prototype.initLocationDetail = function (obj) {
     $('.mlr').scrollTop(0);
 
-    $('.sdC').css('max-height', '90px');
-    $('.mlrc>.tg>a').html('展开');
-    $('.mlrc>.tg').removeClass('text-open');
-
     $('.mlrt').css('background-image', 'url(' + obj.image + ')');
     $('.opening-hours').html(obj.openingHours);
     $('.site-location').html(obj.location);
     $('.site-name').html(obj.name);
+
+    // 展开收起逻辑
     $('.site-description').html(obj.description);
+    if ($('.site-description').height() > 90) { // max-height: 90px;
+        $('.sdC').css('max-height', '90px');
+        $('.tgI').html('展开').removeClass('text-open');
+        $('.tg').show();
+    } else {
+        $('.tg').hide();
+    }
 
     var tempHtml = '';
     var relatedlocationLength = obj.relatedLocations.length;
