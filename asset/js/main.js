@@ -736,8 +736,8 @@ mapData.features = {
         var tempArray = [];
         for (key in _.data) {
             tempArray = [];
-            for (value of _.data[key]) {
-                tempArray.push(_.setFeatureStyle(value.feature, value.style));
+            for (key2 in _.data[key]) {
+                tempArray.push(_.setFeatureStyle(_.data[key][key2].feature, _.data[key][key2].style));
             }
             _.featuresDict[key] = tempArray;
         }
@@ -856,19 +856,20 @@ function mapClick(evt) {
         $(element).popover({
             'placement': 'top',
             'html': true,
-            'content': '<a class="popup-link-container" href="javascript:;" onclick="triggerInitLocationDetail(\'' + feature.get('siteId') + '\');">' +
-                '           <div class="popup-inner">' +
-                '               <div class="popup-inner-img-container">' +
-                '                   <img src="' + siteData[feature.get('siteId')].image + '" class="popup-inner-img">' +
-                '               </div>' +
-                '               <div class="popup-inner-text-container">' +
-                '                   <p class="popup-inner-text-title">' + siteData[feature.get('siteId')].name + '</p>' +
-                '                   <p class="popup-inner-text-subtitle">' + siteData[feature.get('siteId')].subname + '</p>' +
-                '               </div>' +
-                '               <img src="asset/img/right.svg" alt="show-detail" class="popup-inner-right-arrow">' +
-                '               <div class="CF"></div>' +
-                '           </div>' +
-                '       </a>'
+            'content': '\
+                 <a class="popup-link-container" href="javascript:;" onclick="triggerInitLocationDetail(\'' + feature.get('siteId') + '\');">' +
+                '    <div class="popup-inner">' +
+                '        <div class="popup-inner-img-container">' +
+                '            <img src="' + siteData[feature.get('siteId')].image + '" class="popup-inner-img">' +
+                '        </div>' +
+                '        <div class="popup-inner-text-container">' +
+                '            <p class="popup-inner-text-title">' + siteData[feature.get('siteId')].name + '</p>' +
+                '            <p class="popup-inner-text-subtitle">' + siteData[feature.get('siteId')].subname + '</p>' +
+                '        </div>' +
+                '        <img src="asset/img/right.svg" alt="show-detail" class="popup-inner-right-arrow">' +
+                '        <div class="CF"></div>' +
+                '    </div>' +
+                '</a>'
         });
         $(element).popover('show');
     } else {
