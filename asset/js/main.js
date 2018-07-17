@@ -100,7 +100,7 @@ function MenuList() {
             $('.sdC').css('max-height', '90px');
             $(this).html('展开');
         } else {
-            $('.sdC').css('max-height', 'unset');
+            $('.sdC').css('max-height', '9999px');
             $(this).html('收起');
         }
         $(this).toggleClass('text-open');
