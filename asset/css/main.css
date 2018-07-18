@@ -705,9 +705,15 @@ a {
     font-size: 18px;
     background-color: #bd9e58;
     text-align: center;
-    color: #ffffff;
     cursor: pointer;
     z-index: 30;
+}
+
+.p1M,
+.p1M:focus,
+.p1M:active {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .fB,
