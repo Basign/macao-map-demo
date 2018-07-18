@@ -660,16 +660,16 @@ a {
 .popup-inner-text-container {
     width: 138px;
     float: left;
-    margin-top: 8px;
+    margin-top: 6px;
     margin-left: 16px;
-    line-height: 1;
+    line-height: 1.2;
     color: #526483;
 }
 
 .popup-inner-text-title {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     max-width: 132px;
     overflow: hidden;
     text-overflow: ellipsis;
