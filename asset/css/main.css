@@ -451,6 +451,12 @@ a {
 
 /* ------------------------------ map ------------------------------ */
 
+/* 滚动条 hack */
+
+body {
+    overflow: hidden;
+}
+
 #map {
     position: relative;
     height: 100%;

@@ -16,7 +16,8 @@ $(function () {
     // 设置地图容器高度
     var containerHeight = $('.js-offset-top').offset().top;
     $('.C').css({
-        top: containerHeight + 'px'
+        // 11px = 巴黎人 navbar hack
+        top: (containerHeight + 11) + 'px'
     });
 
     // 设置 menuList 图片
@@ -834,10 +835,13 @@ var map = new ol.Map({
         mapData.layers.layersDict['holiday']],
     view: new ol.View({
         projection: projection,
-        center: ol.extent.getCenter(extent),
-        // 缩放倍数
-        resolution: 1,
+        // center: ol.extent.getCenter(extent),
+        center: [450, 2470], // 以大三巴为中心
+        // 默认缩放倍数
+        resolution: 2,
+        // 最小缩放 1/4 大
         maxResolution: 4,
+        // 最大缩放 1/0.5 大
         minResolution: 0.5
     })
 });
