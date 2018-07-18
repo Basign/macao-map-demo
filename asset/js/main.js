@@ -14,10 +14,16 @@ $(function () {
 
 (function () {
     // 设置地图容器高度
-    var containerHeight = $('.js-offset-top').offset().top;
+    var topDistance = $('.js-offset-top').offset().top;
+    var offsetTopPixel = 0;
+    // 利用 mobile 特殊元素判断 mobile/PC
+    if ($('.m-lang').is(':hidden')) {
+        var offsetTopPixel = (topDistance + 11) + 'px'; // 11px = 巴黎人 PC navbar hack
+    } else {
+        var offsetTopPixel = (topDistance + 4) + 'px'; // 7px = 巴黎人 mobile navbar hack
+    }
     $('.C').css({
-        // 11px = 巴黎人 navbar hack
-        top: (containerHeight + 11) + 'px'
+        top: offsetTopPixel
     });
 
     // 设置 menuList 图片

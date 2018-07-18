@@ -454,7 +454,7 @@ a {
 /* 滚动条 hack */
 
 body {
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 #map {
