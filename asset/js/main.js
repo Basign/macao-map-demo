@@ -14,9 +14,9 @@ $(function () {
 
 (function () {
     // 设置地图容器高度
-    var containerHeight = $('.C').offset().top;
+    var containerHeight = $('.js-offset-top').offset().top;
     $('.C').css({
-        height: 'calc(100vh - ' + containerHeight + 'px)'
+        top: containerHeight + 'px'
     });
 
     // 设置 menuList 图片

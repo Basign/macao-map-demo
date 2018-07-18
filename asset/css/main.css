@@ -46,10 +46,18 @@ a {
 
 /* ------------------------------ atomic class end ------------------------------ */
 
+.js-offset-top {
+    height: 0;
+}
+
 .C {
-    position: relative;
+    position: fixed;
+    /* top 由 js 计算 */
+    left: 0;
+    bottom: 0;
+    width: 100%;
     font-size: 14px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', 微软雅黑, sans-serif;
 }
 
 /* ------------------------------ popup ------------------------------ */
@@ -819,7 +827,7 @@ a {
     }
     .mll {
         width: 100vw;
-        right: calc(0px - 100vw);
+        right: -100vw;
         height: calc(100% - 52px);
     }
     .ml.open1 {
@@ -830,7 +838,7 @@ a {
     }
     .mlr {
         width: 100vw;
-        right: calc(0px - 200vw);
+        right: -200vw;
         height: calc(100% - 52px);
     }
     .cBC {
