@@ -462,6 +462,14 @@ a {
     left: 15px;
 }
 
+.ol-compass {
+    color: #ced0d5;
+    font-size: 33px;
+    position: relative;
+    top: -2px;
+    transform-origin: 50% 70%;
+}
+
 /* ------------------------------ map end ------------------------------ */
 
 /* ------------------------------ bootstrap popover ------------------------------ */
@@ -679,16 +687,17 @@ a {
 
 .p1M {
     display: none;
-    position: absolute;
-    right: 0;
+    width: 100%;
+    position: fixed;
+    left: 0;
     bottom: 0;
-    width: 100vw;
     line-height: 52px;
     font-size: 18px;
     background-color: #bd9e58;
     text-align: center;
     color: #ffffff;
     cursor: pointer;
+    z-index: 20;
 }
 
 .fB,
@@ -756,12 +765,13 @@ a {
         display: none;
     }
     .MO {
-        position: absolute;
-        z-index: 1030;
-        top: 0;
+        width: 100%;
+        /* height 溢出 */
+        height: 100%;
+        position: fixed;
         left: 0;
-        right: 0;
         bottom: 52px;
+        z-index: 1030;
         background: rgba(221, 239, 252, 0.7);
         padding-bottom: 95px;
         padding-right: 15px;
