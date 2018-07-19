@@ -48,7 +48,9 @@ $(function () {
 });
 
 (function () {
-    // 设置地图容器高度
+    // js 设置样式
+    // 地图容器高度
+    // mobile overlay 高度
     var topDistance = $('.js-offset-top').offset().top;
     var offsetTopPixel = 0;
     // 利用 mobile 特殊元素判断 mobile/PC
@@ -59,6 +61,9 @@ $(function () {
     }
     $('.C').css({
         top: offsetTopPixel
+    });
+    $('.MO').css({
+        height: 'calc(100% - ' + (offsetTopPixel + 52) + 'px'
     });
 
     // 设置 menuList 图片

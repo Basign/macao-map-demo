@@ -824,8 +824,6 @@ a {
     }
     .MO {
         width: 100%;
-        /* height 溢出 */
-        height: 100%;
         position: fixed;
         left: 0;
         bottom: 52px;
