@@ -236,25 +236,25 @@ app.CustomControl = function (opt_options) {
     var currentLayerIndex = 0;
 
     var filterAll = document.createElement('button');
-    filterAll.innerHTML = '<img src="asset/img/all.svg" alt="filter-all">';
-    var handleRotateNorth = function () {
-        this_.getMap().getView().setRotation(0);
-    };
+    filterAll.classList.add('active');
+    filterAll.innerHTML = '<div class="filter-all-inner"></div>';
 
     var filterViewSpot = document.createElement('button');
-    filterViewSpot.innerHTML = '<img src="asset/img/door.svg" alt="filter-view-spot">';
+    filterViewSpot.innerHTML = '<div class="filter-viewspot-inner"></div>';
 
     var filterFood = document.createElement('button');
-    filterFood.innerHTML = '<img src="asset/img/food.svg" alt="filter-food">';
+    filterFood.innerHTML = '<div class="filter-food-inner"></div>';
 
     var filterEntertainment = document.createElement('button');
-    filterEntertainment.innerHTML = '<img src="asset/img/star.svg" alt="filter-entertainment">';
+    filterEntertainment.innerHTML = '<div class="filter-entertainment-inner"></div>';
 
     var filterHoliday = document.createElement('button');
-    filterHoliday.innerHTML = '<img src="asset/img/balloon.svg" alt="filter-holiday">';
+    filterHoliday.innerHTML = '<div class="filter-holiday-inner"></div>';
 
     // 全部
     function changeFilterAll() {
+        $('.ol-feature-filter>button.active').removeClass('active');
+        $(this).addClass('active');
         this_.currentLayerIndex = 0;
 
         this_.getMap().setLayerGroup(new ol.layer.Group({
@@ -270,6 +270,8 @@ app.CustomControl = function (opt_options) {
 
     // 观光景点
     function changeFilterViewSpot() {
+        $('.ol-feature-filter>button.active').removeClass('active');
+        $(this).addClass('active');
         if (this_.currentLayerIndex !== 1) {
             $('#popup').popover('destroy');
         }
@@ -284,6 +286,8 @@ app.CustomControl = function (opt_options) {
 
     // 美食
     function changeFilterFood() {
+        $('.ol-feature-filter>button.active').removeClass('active');
+        $(this).addClass('active');
         if (this_.currentLayerIndex !== 2) {
             $('#popup').popover('destroy');
         }
@@ -298,6 +302,8 @@ app.CustomControl = function (opt_options) {
 
     // 娱乐活动
     function changeFilterEntertainment() {
+        $('.ol-feature-filter>button.active').removeClass('active');
+        $(this).addClass('active');
         if (this_.currentLayerIndex !== 3) {
             $('#popup').popover('destroy');
         }
@@ -312,6 +318,8 @@ app.CustomControl = function (opt_options) {
 
     // 节日盛事
     function changeFilterHoliday() {
+        $('.ol-feature-filter>button.active').removeClass('active');
+        $(this).addClass('active');
         if (this_.currentLayerIndex !== 4) {
             $('#popup').popover('destroy');
         }
