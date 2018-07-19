@@ -275,7 +275,6 @@ main.full {
     right: -15px;
     bottom: -2px;
     background-color: #f0f3f3;
-    z-index: 0;
 }
 
 .pnt [alt="down-caret"] {

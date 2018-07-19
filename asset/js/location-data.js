@@ -185,7 +185,7 @@ var siteData = {
         "openingHours": "全天",
         "description": "全球首个由玩家主导的室内主题乐园Planet J冒险王国，是澳门本土第一个主题乐园。乐园占地100,000平方呎，由8个不同的主题园区组成，拥有超过200种互动游戏装置。Planet J冒险王国打破传统主题乐园营运模式，让玩家能参与冒险游戏的创作，推动故事向前发展。",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvll0ldm4j20ci08cjwi.jpg",
-        "coordinates": [1060, 1195],
+        "coordinates": [1105, 1115],
         "subname": "",
         "relatedLocations": [11, 12]
     },

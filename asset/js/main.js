@@ -681,9 +681,9 @@ mapData.features = {
                 }),
                 style: new ol.style.Style({
                     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [5, 5],
-                        anchorXUnits: 'pixels',
-                        anchorYUnits: 'pixels',
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
                         src: 'https://s1.ax1x.com/2018/07/11/Pu0LZD.png'
                     }))
                 })
