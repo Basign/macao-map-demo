@@ -255,6 +255,7 @@ main.full {
 }
 
 .ln {
+    position: relative;
     display: inline-block;
     width: calc(100% - 40px);
     overflow: hidden;
@@ -266,8 +267,15 @@ main.full {
     border-top: 2px solid #f0f3f3;
 }
 
-.pn>:not(.pnt).active {
-    background-color: #f6f6f6;
+.pn>:not(.pnt).active:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -15px;
+    right: -15px;
+    bottom: -2px;
+    background-color: #f0f3f3;
+    z-index: 0;
 }
 
 .pnt [alt="down-caret"] {
