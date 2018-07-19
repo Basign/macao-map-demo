@@ -1,3 +1,13 @@
+// IE10 特殊样式
+var isIE = function (ver) {
+    var b = document.createElement('b');
+    b.innerHTML = '<!--[if IE ' + ver + ']><i></i><![endif]-->';
+    return b.getElementsByTagName('i').length === 1;
+}
+if (!isIE(10)) {
+    document.body.innerHTML += "<style>body{overflow:hidden;}</style>";
+}
+
 // bug fix hack
 $(function () {
     if (typeof (Event) === 'function') {

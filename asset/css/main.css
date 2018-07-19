@@ -453,10 +453,6 @@ a {
 
 /* 滚动条 hack */
 
-body {
-    overflow-y: hidden;
-}
-
 #map {
     position: relative;
     height: 100%;
