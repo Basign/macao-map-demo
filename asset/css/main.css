@@ -543,7 +543,9 @@ a {
     z-index: auto;
     display: none;
     width: 345px;
+    max-width: 345px;
     height: 100px;
+    padding: 0;
     font-size: 14px;
     font-style: normal;
     font-weight: normal;
@@ -561,6 +563,7 @@ a {
     background-color: #fff;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
+    border: none;
     border-radius: 3px;
     -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     box-shadow: 0 3px 20px rgba(0, 0, 0, .11);
@@ -620,6 +623,7 @@ a {
     bottom: -11px;
     left: 50%;
     margin-left: -11px;
+    border-top: none;
     border-bottom-width: 0;
 }
 
