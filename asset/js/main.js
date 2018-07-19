@@ -29,7 +29,7 @@ var IE = (function () {
 
     return ret;
 }());
-if (IE.actualVersion !== 10) {
+if (IE.actualVersion != '10') {
     document.body.innerHTML += "<style>body{overflow:hidden;}</style>";
 }
 
