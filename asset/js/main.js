@@ -55,15 +55,15 @@ $(function () {
     var offsetTopPixel = 0;
     // 利用 mobile 特殊元素判断 mobile/PC
     if ($('.m-lang').is(':hidden')) {
-        var offsetTopPixel = (topDistance + 11) + 'px'; // 11px = 巴黎人 PC navbar hack
+        var offsetTopPixel = (topDistance + 11); // 11px = 巴黎人 PC navbar hack
     } else {
-        var offsetTopPixel = (topDistance + 4) + 'px'; // 7px = 巴黎人 mobile navbar hack
+        var offsetTopPixel = (topDistance + 4); // 7px = 巴黎人 mobile navbar hack
     }
     $('.C').css({
-        top: offsetTopPixel
+        top: offsetTopPixel + 'px'
     });
     $('.MO').css({
-        height: 'calc(100% - ' + (offsetTopPixel + 52) + 'px'
+        height: 'calc(100% - ' + (offsetTopPixel + 52) + 'px)'
     });
 
     // 设置 menuList 图片
