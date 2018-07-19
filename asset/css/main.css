@@ -47,6 +47,10 @@ a {
 
 /* ------------------------------ atomic class end ------------------------------ */
 
+.main-footer {
+    display: none;
+}
+
 /* 覆盖 new-ui.css */
 
 main.full {
@@ -838,7 +842,7 @@ main.full {
         bottom: 52px;
         z-index: 8;
         background: rgba(221, 239, 252, 0.7);
-        padding-bottom: 95px;
+        padding-bottom: 88px;
         padding-right: 15px;
     }
     .MOI {
@@ -854,12 +858,13 @@ main.full {
         width: 100%;
     }
     .MOL {
-        margin-top: 15px;
+        margin-top: 12px;
         cursor: pointer;
     }
     .MOLT {
         font-size: 15px;
         color: #bd9e58;
+        vertical-align: 16px;
     }
     .MOLIC {
         display: inline-block;
@@ -869,7 +874,6 @@ main.full {
         background-color: #ffffff;
         text-align: center;
         margin-left: 11px;
-        vertical-align: 17px;
     }
     .MOLIC.cMO {
         position: absolute;
@@ -878,9 +882,13 @@ main.full {
         cursor: pointer;
     }
     .MOLIC img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
         width: 24px;
         height: 24px;
-        vertical-align: -22px;
+        display: block;
+        margin: 0 auto;
     }
     .mll {
         width: 100vw;
