@@ -1,3 +1,8 @@
+// 去掉 footer
+$(function () {
+    $('.main-footer').remove();
+});
+
 // IE10 特殊样式
 var IE = (function () {
     "use strict";

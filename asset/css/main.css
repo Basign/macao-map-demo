@@ -47,6 +47,12 @@ a {
 
 /* ------------------------------ atomic class end ------------------------------ */
 
+/* 覆盖 new-ui.css */
+
+main.full {
+    min-height: 0px !important;
+}
+
 .js-offset-top {
     height: 0;
 }
@@ -57,7 +63,6 @@ a {
     left: 0;
     bottom: 0;
     width: 100%;
-    z-index: 10;
     font-size: 14px;
     font-family: -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', 微软雅黑, sans-serif;
 }
@@ -162,7 +167,7 @@ a {
 /* ------------------------------ menu list ------------------------------ */
 
 .ml {
-    z-index: 12;
+    z-index: 4;
     position: absolute;
     top: 0;
     right: 0;
@@ -213,7 +218,7 @@ a {
 }
 
 .mll:not(.mllf) {
-    z-index: 11;
+    z-index: 3;
 }
 
 .pnC {
@@ -297,7 +302,7 @@ a {
 }
 
 .mlri>.cls {
-    z-index: 11;
+    z-index: 3;
     position: absolute;
     top: 18px;
     right: 18px;
@@ -752,7 +757,7 @@ a {
     background-color: #bd9e58;
     text-align: center;
     cursor: pointer;
-    z-index: 30;
+    z-index: 10;
 }
 
 .p1M,
@@ -831,7 +836,7 @@ a {
         position: fixed;
         left: 0;
         bottom: 52px;
-        z-index: 20;
+        z-index: 8;
         background: rgba(221, 239, 252, 0.7);
         padding-bottom: 95px;
         padding-right: 15px;
