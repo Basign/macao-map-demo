@@ -542,8 +542,8 @@ a {
     left: 0;
     z-index: auto;
     display: none;
-    max-width: 276px;
-    padding: 1px;
+    width: 345px;
+    height: 100px;
     font-size: 14px;
     font-style: normal;
     font-weight: normal;
@@ -561,11 +561,9 @@ a {
     background-color: #fff;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 6px;
+    border-radius: 3px;
     -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, .11);
     line-break: auto;
 }
 
@@ -595,7 +593,8 @@ a {
 }
 
 .popover-content {
-    padding: 9px 14px;
+    height: 100%;
+    padding: 20px 24.5px 20px 23.5px;
 }
 
 .popover>.arrow,
@@ -621,8 +620,6 @@ a {
     bottom: -11px;
     left: 50%;
     margin-left: -11px;
-    border-top-color: #999;
-    border-top-color: rgba(0, 0, 0, .25);
     border-bottom-width: 0;
 }
 
@@ -693,11 +690,6 @@ a {
     display: block;
 }
 
-.popup-inner {
-    width: 240px;
-    padding: 2px 5px;
-}
-
 .popup-inner-img-container {
     float: left;
     width: 60px;
@@ -708,31 +700,29 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 .popup-inner-text-container {
-    width: 138px;
     float: left;
-    margin-top: 6px;
-    margin-left: 16px;
+    width: calc(100% - 93.5px);
+    margin-top: 6.6px;
+    margin-left: 17.5px;
     line-height: 1.2;
     color: #526483;
 }
 
 .popup-inner-text-title {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: bold;
-    margin-bottom: 6px;
-    max-width: 132px;
+    margin-bottom: 6.7px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 .popup-inner-text-subtitle {
-    font-size: 14px;
-    max-width: 132px;
+    font-size: 13px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -909,6 +899,9 @@ a {
     .cBC>img {
         float: right;
         cursor: pointer;
+    }
+    #map .popover {
+        width: calc(100vw - 30px);
     }
 }
 
