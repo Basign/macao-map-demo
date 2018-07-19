@@ -222,7 +222,7 @@ a {
 
 .pn {
     width: 100%;
-    height: 72px;
+    height: 74px;
     border-radius: 2px;
     color: #526483;
     font-size: 16px;
@@ -255,6 +255,10 @@ a {
 
 .pn>:not(.pnt) {
     border-top: 2px solid #f0f3f3;
+}
+
+.pn>:not(.pnt).active {
+    background-color: #f6f6f6;
 }
 
 .pnt [alt="down-caret"] {

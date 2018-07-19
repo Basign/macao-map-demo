@@ -122,7 +122,7 @@ function MenuList() {
             // down-caret 收起
             $('[alt="down-caret"]').removeClass('open');
             // 分类收起
-            var height = ($(this).siblings().length + 1) * (72 + 2) - 2;
+            var height = ($(this).siblings().length + 1) * 74;
 
             $(this).find('[alt="down-caret"]').addClass('open').closest('.pn').addClass('open').css('height', height + 'px');
         }
@@ -131,6 +131,18 @@ function MenuList() {
         // var $this = $(this);
         // var layerIndex = $this.parent().index();
         // $('.ol-feature-filter>button').eq(layerIndex + 1).trigger('click');
+    });
+
+    $(document).on('click', '[data-location-id]', function () {
+        // 收起其他展开, 添加 active 状态
+        $('.pn').addClass('open');
+        $('.pnt').trigger('click');
+        $(this).closest('.pn').children('.pnt').trigger('click');
+        $('.pn>div.active').removeClass('active');
+        $(this).addClass('active');
+
+        var id = $(this).data('location-id');
+        self.initLocationDetail(siteData[id]);
     });
 
     $(document).on('click', '.mlri>.cls', function () {
@@ -148,13 +160,6 @@ function MenuList() {
         $(this).toggleClass('text-open');
     });
 
-    $(document).on('click', '.pn>:not(.pnt)', function () {
-        // TODO 收起其他展开, 添加 active 状态
-
-        var id = $(this).data('location-id');
-        self.initLocationDetail(siteData[id]);
-    });
-
     $(document).on('click', '.mlrb', function findOnMap() {
         // 切换 全部 图层, 以显示所有 feature
         $('.ol-feature-filter>button').eq(0).trigger('click');
@@ -166,8 +171,6 @@ function MenuList() {
     $(document).on('click', '.lCiW', function () {
         var id = $(this).data('site-id');
         triggerInitLocationDetail(id);
-
-        // TODO trigger
     });
 }
 
@@ -215,7 +218,7 @@ var menuList = new MenuList();
 
 function triggerInitLocationDetail(id) {
     $(element).popover('destroy');
-    menuList.initLocationDetail(siteData[id]);
+    $('[data-location-id="' + id + '"]').trigger('click');
 }
 
 window.app = {};
