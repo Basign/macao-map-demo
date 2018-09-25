@@ -834,10 +834,10 @@ var backgroundLayer = new ol.layer.Image({
 });
 
 var zoomIn = document.createElement("img");
-zoomIn.setAttribute('src', 'asset/img/zoom-in-2.svg');
+zoomIn.setAttribute('src', 'https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/zoom-in-2.svg');
 zoomIn.setAttribute('alt', 'zoom-in');
 var zoomOut = document.createElement("img");
-zoomOut.setAttribute('src', 'asset/img/zoom-out-2.svg');
+zoomOut.setAttribute('src', 'https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/zoom-out-2.svg');
 zoomOut.setAttribute('alt', 'zoom-out');
 
 var map = new ol.Map({
@@ -905,7 +905,7 @@ function mapClick(evt) {
                 '            <p class="popup-inner-text-title">' + siteData[feature.get('siteId')].name + '</p>' +
                 '            <p class="popup-inner-text-subtitle">' + siteData[feature.get('siteId')].subname + '</p>' +
                 '        </div>' +
-                '        <img src="asset/img/right.svg" alt="show-detail" class="popup-inner-right-arrow">' +
+                '        <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/right.svg" alt="show-detail" class="popup-inner-right-arrow">' +
                 '        <div class="CF"></div>' +
                 '    </div>' +
                 '</a>'
