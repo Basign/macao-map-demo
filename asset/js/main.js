@@ -60,6 +60,7 @@ function MenuList() {
         } else {
             $('.ml').addClass('menu-open open1');
         }
+        $('.pC>.pp').removeClass('open');
     });
 
     $(document).on('click', '.fB', function () {
@@ -104,6 +105,8 @@ function MenuList() {
     });
 
     $(document).on('click', '[data-location-id]', function () {
+        $('.pC>.pp').removeClass('open');
+
         // 收起其他展开, 添加 active 状态
         $('.pn').addClass('open');
         $('.pnt').trigger('click');
