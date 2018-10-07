@@ -846,8 +846,8 @@ var backgroundLayer = new ol.layer.Image({
     })
 });
 
-var zoomIn = $('<svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><defs><style/></defs><path d="M469.333 469.333H170.667v85.334h298.666v298.666h85.334V554.667h298.666v-85.334H554.667V170.667h-85.334v298.666z" fill="#ced0d5"/></svg>')[0];
-var zoomOut = $('<svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><defs><style/></defs><path d="M170.667 469.333h682.666v85.334H170.667z" fill="#ced0d5"/></svg>')[0];
+var zoomIn = $('<svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><defs><style/></defs><path d="M469.333 469.333H170.667v85.334h298.666v298.666h85.334V554.667h298.666v-85.334H554.667V170.667h-85.334v298.666z"/></svg>')[0];
+var zoomOut = $('<svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><defs><style/></defs><path d="M170.667 469.333h682.666v85.334H170.667z"/></svg>')[0];
 
 var map = new ol.Map({
     controls: ol.control.defaults({

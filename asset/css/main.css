@@ -1068,3 +1068,11 @@ main.full {
 .ol-control button:hover {
     background: #f5f5f5;
 }
+
+.ol-zoom.ol-control button svg {
+    fill: #ced0d5;
+}
+
+.ol-zoom.ol-control button:active svg {
+    fill: #bd9e58;
+}
