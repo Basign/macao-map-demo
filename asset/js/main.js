@@ -211,7 +211,7 @@ app.CustomControl = function (opt_options) {
     var filterAll = document.createElement('button');
     filterAll.title = '全部';
     filterAll.dataset.toggle = 'tooltip';
-    filterAll.classList.add('active', 'spot-all');
+    filterAll.classList.add('active');
     filterAll.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.727 20.727" width="20.727" height="20.727"><defs><style>.cls-1,.cls-3{fill:none}.cls-1{stroke-miterlimit:10;stroke-width:1.4px}.cls-2{stroke:none}</style></defs><g id="全部_选中" transform="translate(-1.636 -1.636)"><g id="Group_6" data-name="Group 6" transform="translate(1.636 1.636)"><g id="Rectangle_3" data-name="Rectangle 3" class="cls-1"><path class="cls-2" d="M0 0h9.212v9.212H0z"/><path class="cls-3" d="M.7.7h7.812v7.812H.7z"/></g><g id="Rectangle_3_Copy_2" data-name="Rectangle 3 Copy 2" class="cls-1"><path class="cls-2" d="M0 0h9.212v9.212H0z" transform="translate(0 11.515)"/><path class="cls-3" d="M.7.7h7.812v7.812H.7z" transform="translate(0 11.515)"/></g><g id="Rectangle_3_Copy" data-name="Rectangle 3 Copy" class="cls-1"><path class="cls-2" d="M0 0h9.212v9.212H0z" transform="translate(11.515)"/><path class="cls-3" d="M.7.7h7.812v7.812H.7z" transform="translate(11.515)"/></g><g id="Rectangle_3_Copy_3" data-name="Rectangle 3 Copy 3" class="cls-1"><path class="cls-2" d="M0 0h9.212v9.212H0z" transform="translate(11.515 11.515)"/><path class="cls-3" d="M.7.7h7.812v7.812H.7z" transform="translate(11.515 11.515)"/></g></g></g></svg>';
 
     var filterViewSpot = document.createElement('button');
@@ -234,6 +234,10 @@ app.CustomControl = function (opt_options) {
     filterHoliday.dataset.toggle = 'tooltip';
     filterHoliday.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.127 22.518" width="22.127" height="22.518"><defs><style>.cls-1{fill:none;stroke-miterlimit:10;stroke-width:1.4px}.cls-2a{fill:#c9cfd8}</style></defs><g id="节日盛事" transform="translate(-.937 -.391)"><g id="节日盛事-2" data-name="节日盛事"><g id="Group_4" data-name="Group 4" transform="translate(1.636 1.091)"><path id="Oval" class="cls-1" d="M9.038.845A5.725 5.725 0 0 0 6.045 0 6.261 6.261 0 0 0 0 6.456a6.261 6.261 0 0 0 6.045 6.456A6.1 6.1 0 0 0 11.8 8.444" transform="translate(0 3.562)"/><ellipse id="Oval_Copy_2" data-name="Oval Copy 2" class="cls-1" cx="6.045" cy="6.456" rx="6.045" ry="6.456" transform="translate(8.636)"/><path id="Line_5" data-name="Line 5" class="cls-2a" d="M0 0v5.343h1.4V0z" transform="translate(5.614 16.475)"/><path id="Line_5_Copy" data-name="Line 5 Copy" class="cls-2a" d="M0 0v8.905h1.4V0z" transform="translate(14.25 12.913)"/><path id="Oval_Copy" data-name="Oval Copy" class="cls-1" d="M0 4.23A4.069 4.069 0 0 0 3.886 0" transform="translate(5.527 9.96)"/><path id="Oval_Copy_3" data-name="Oval Copy 3" class="cls-1" d="M0 4.23A4.069 4.069 0 0 0 3.886 0" transform="translate(14.279 5.692)"/></g></g></g></svg>';
 
+    function zoomOut() {
+        map.getView().animate({ resolution: mapPara.maxResolution }, { center: mapPara.center });
+    }
+
     // 全部
     function changeFilterAll() {
         $('.ol-feature-filter>button.active').removeClass('active');
@@ -247,6 +251,8 @@ app.CustomControl = function (opt_options) {
                 mapData.layers.layersDict['entertainment'],
                 mapData.layers.layersDict['holiday']]
         }));
+
+        zoomOut();
     }
     filterAll.addEventListener('click', changeFilterAll, false);
     filterAll.addEventListener('touchstart', changeFilterAll, false);
@@ -263,6 +269,8 @@ app.CustomControl = function (opt_options) {
         this_.getMap().setLayerGroup(new ol.layer.Group({
             layers: [backgroundLayer, mapData.layers.layersDict['viewSpot']]
         }));
+
+        zoomOut();
     }
     filterViewSpot.addEventListener('click', changeFilterViewSpot, false);
     filterViewSpot.addEventListener('touchstart', changeFilterViewSpot, false);
@@ -279,6 +287,8 @@ app.CustomControl = function (opt_options) {
         this_.getMap().setLayerGroup(new ol.layer.Group({
             layers: [backgroundLayer, mapData.layers.layersDict['food']]
         }));
+
+        zoomOut();
     }
     filterFood.addEventListener('click', changeFilterFood, false);
     filterFood.addEventListener('touchstart', changeFilterFood, false);
@@ -295,6 +305,8 @@ app.CustomControl = function (opt_options) {
         this_.getMap().setLayerGroup(new ol.layer.Group({
             layers: [backgroundLayer, mapData.layers.layersDict['entertainment']]
         }));
+
+        zoomOut();
     }
     filterEntertainment.addEventListener('click', changeFilterEntertainment, false);
     filterEntertainment.addEventListener('touchstart', changeFilterEntertainment, false);
@@ -311,6 +323,8 @@ app.CustomControl = function (opt_options) {
         this_.getMap().setLayerGroup(new ol.layer.Group({
             layers: [backgroundLayer, mapData.layers.layersDict['holiday']]
         }));
+
+        zoomOut();
     }
     filterHoliday.addEventListener('click', changeFilterHoliday, false);
     filterHoliday.addEventListener('touchstart', changeFilterHoliday, false);
@@ -849,6 +863,12 @@ var backgroundLayer = new ol.layer.Image({
 var zoomIn = $('<svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><defs><style/></defs><path d="M469.333 469.333H170.667v85.334h298.666v298.666h85.334V554.667h298.666v-85.334H554.667V170.667h-85.334v298.666z"/></svg>')[0];
 var zoomOut = $('<svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><defs><style/></defs><path d="M170.667 469.333h682.666v85.334H170.667z"/></svg>')[0];
 
+var mapPara = {
+    resolution: 2,
+    maxResolution: 4,
+    center: [1058, 1602],
+    initialCenter: [450, 2470] // 以大三巴为中心
+};
 var map = new ol.Map({
     controls: ol.control.defaults({
         attribution: false,
@@ -867,11 +887,11 @@ var map = new ol.Map({
     view: new ol.View({
         projection: projection,
         // center: ol.extent.getCenter(extent),
-        center: [450, 2470], // 以大三巴为中心
+        center: mapPara.initialCenter,
         // 默认缩放倍数
-        resolution: 2,
+        resolution: mapPara.resolution,
         // 最小缩放 1/4 大
-        maxResolution: 4,
+        maxResolution: mapPara.maxResolution,
         // 最大缩放 1/0.5 大
         minResolution: 0.5
     })
