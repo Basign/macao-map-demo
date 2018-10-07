@@ -501,44 +501,12 @@ main.full {
     margin: 0 auto;
 }
 
-.filter-all-inner {
-    background: url('../img/all.svg');
+.ol-feature-filter>button svg {
+    stroke: #c9cfd8;
 }
 
-.ol-feature-filter>button.active .filter-all-inner {
-    background: url('../img/all-gold.svg');
-}
-
-.filter-viewspot-inner {
-    background: url('../img/door.svg');
-}
-
-.ol-feature-filter>button.active .filter-viewspot-inner {
-    background: url('../img/door-gold.svg');
-}
-
-.filter-food-inner {
-    background: url('../img/food.svg');
-}
-
-.ol-feature-filter>button.active .filter-food-inner {
-    background: url('../img/food-gold.svg');
-}
-
-.filter-entertainment-inner {
-    background: url('../img/star.svg');
-}
-
-.ol-feature-filter>button.active .filter-entertainment-inner {
-    background: url('../img/star-gold.svg');
-}
-
-.filter-holiday-inner {
-    background: url('../img/balloon.svg');
-}
-
-.ol-feature-filter>button.active .filter-holiday-inner {
-    background: url('../img/balloon-gold.svg');
+.ol-feature-filter>button.active svg {
+    stroke: #bd9e58;
 }
 
 .ol-compass {

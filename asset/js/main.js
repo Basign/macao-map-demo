@@ -211,28 +211,28 @@ app.CustomControl = function (opt_options) {
     var filterAll = document.createElement('button');
     filterAll.title = '全部';
     filterAll.dataset.toggle = 'tooltip';
-    filterAll.classList.add('active');
-    filterAll.innerHTML = '<div class="filter-all-inner"></div>';
+    filterAll.classList.add('active', 'spot-all');
+    filterAll.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.727 20.727" width="20.727" height="20.727"><defs><style>.cls-1,.cls-3{fill:none}.cls-1{stroke-miterlimit:10;stroke-width:1.4px}.cls-2{stroke:none}</style></defs><g id="全部_选中" transform="translate(-1.636 -1.636)"><g id="Group_6" data-name="Group 6" transform="translate(1.636 1.636)"><g id="Rectangle_3" data-name="Rectangle 3" class="cls-1"><path class="cls-2" d="M0 0h9.212v9.212H0z"/><path class="cls-3" d="M.7.7h7.812v7.812H.7z"/></g><g id="Rectangle_3_Copy_2" data-name="Rectangle 3 Copy 2" class="cls-1"><path class="cls-2" d="M0 0h9.212v9.212H0z" transform="translate(0 11.515)"/><path class="cls-3" d="M.7.7h7.812v7.812H.7z" transform="translate(0 11.515)"/></g><g id="Rectangle_3_Copy" data-name="Rectangle 3 Copy" class="cls-1"><path class="cls-2" d="M0 0h9.212v9.212H0z" transform="translate(11.515)"/><path class="cls-3" d="M.7.7h7.812v7.812H.7z" transform="translate(11.515)"/></g><g id="Rectangle_3_Copy_3" data-name="Rectangle 3 Copy 3" class="cls-1"><path class="cls-2" d="M0 0h9.212v9.212H0z" transform="translate(11.515 11.515)"/><path class="cls-3" d="M.7.7h7.812v7.812H.7z" transform="translate(11.515 11.515)"/></g></g></g></svg>';
 
     var filterViewSpot = document.createElement('button');
     filterViewSpot.title = '观光景点';
     filterViewSpot.dataset.toggle = 'tooltip';
-    filterViewSpot.innerHTML = '<div class="filter-viewspot-inner"></div>';
+    filterViewSpot.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.89 17.441" width="23.89" height="17.441"><defs><style>.cls-1,.cls-2{fill:none;stroke-miterlimit:10;stroke-width:1.4px}.cls-2{stroke-linecap:square}</style></defs><g id="观光景点" transform="translate(-.055 -3.237)"><g id="观光景点-2" data-name="观光景点"><g id="观光景点_选中"><g id="Group_2" data-name="Group 2" transform="translate(.545 3.273)"><path id="Path" class="cls-1" d="M5.25 0c-.1 1.95-.772 6.2-2.879 7.753A1.714 1.714 0 0 1 0 7.495"/><path id="Path_Copy" data-name="Path Copy" class="cls-1" d="M-5.25 0c.1 1.95.772 6.2 2.879 7.753A1.714 1.714 0 0 0 0 7.495" transform="translate(22.909)"/><path id="Line_4" data-name="Line 4" class="cls-2" d="M.257.716h12.85" transform="translate(4.773 1.909)"/><path id="Line_4_Copy" data-name="Line 4 Copy" class="cls-2" d="M0 .477h15.273" transform="translate(3.818 6.205)"/><path id="Path-2" data-name="Path" class="cls-1" d="M0 .477h19.568" transform="translate(1.432 16.227)"/><path id="Path-3" data-name="Path" class="cls-1" d="M0 10.023V0" transform="translate(17.659 6.682)"/><path id="Path_Copy_2" data-name="Path Copy 2" class="cls-1" d="M.477 4.3V0" transform="translate(10.977 2.386)"/><path id="Path_Copy_3" data-name="Path Copy 3" class="cls-1" d="M.477 4.3V0" transform="translate(6.682 2.386)"/><path id="Path_Copy_4" data-name="Path Copy 4" class="cls-1" d="M.477 4.3V0" transform="translate(15 2)"/><path id="Path_Copy_6" data-name="Path Copy 6" class="cls-1" d="M1.023 9.568L1 0" transform="translate(4.136 7)"/></g></g></g></g></svg>';
 
     var filterFood = document.createElement('button');
     filterFood.title = '美食';
     filterFood.dataset.toggle = 'tooltip';
-    filterFood.innerHTML = '<div class="filter-food-inner"></div>';
+    filterFood.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.568 14.474" width="19.568" height="14.474"><defs><style>.cls-1{fill:none;stroke-miterlimit:10;stroke-width:1.4px}</style></defs><g id="美食" transform="translate(-1.977 -4.204)"><g id="美食-2" data-name="美食"><g id="Group_7" data-name="Group 7"><g id="美食-3" data-name="美食" transform="translate(0 4)"><g id="Group_3" data-name="Group 3" transform="translate(0 .204)"><path id="Fill_1" data-name="Fill 1" class="cls-1" d="M20.757 8.957H2.732a9.413 9.413 0 0 1 2.755-6.343 8.8 8.8 0 0 1 12.513 0 9.413 9.413 0 0 1 2.755 6.342z" transform="translate(0 1.545)"/><path id="Line_3" data-name="Line 3" class="cls-1" d="M.49 1.288V0" transform="translate(11.265)"/></g><path id="Fill_4" data-name="Fill 4" class="cls-1" d="M0 4.555A6.957 6.957 0 0 1 4.317 0" transform="translate(5.963 4.683)"/><path id="Path" class="cls-1" d="M0 .477h19.568" transform="translate(1.977 13.5)"/></g></g></g></g></svg>';
 
     var filterEntertainment = document.createElement('button');
     filterEntertainment.title = '娱乐活动';
     filterEntertainment.dataset.toggle = 'tooltip';
-    filterEntertainment.innerHTML = '<div class="filter-entertainment-inner"></div>';
+    filterEntertainment.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.759 22.596" width="23.759" height="22.596"><path d="M11.88 17.946l-6.409 3.371 1.225-7.14L1.505 9.12l7.166-1.038 3.209-6.5 3.206 6.5 7.169 1.042-5.184 5.053 1.225 7.14z" fill="none" stroke-miterlimit="10" stroke-width="1.4" data-name="娱乐活动"/></svg>';
 
     var filterHoliday = document.createElement('button');
     filterHoliday.title = '节日盛事';
     filterHoliday.dataset.toggle = 'tooltip';
-    filterHoliday.innerHTML = '<div class="filter-holiday-inner"></div>';
+    filterHoliday.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.127 22.518" width="22.127" height="22.518"><defs><style>.cls-1{fill:none;stroke-miterlimit:10;stroke-width:1.4px}.cls-2a{fill:#c9cfd8}</style></defs><g id="节日盛事" transform="translate(-.937 -.391)"><g id="节日盛事-2" data-name="节日盛事"><g id="Group_4" data-name="Group 4" transform="translate(1.636 1.091)"><path id="Oval" class="cls-1" d="M9.038.845A5.725 5.725 0 0 0 6.045 0 6.261 6.261 0 0 0 0 6.456a6.261 6.261 0 0 0 6.045 6.456A6.1 6.1 0 0 0 11.8 8.444" transform="translate(0 3.562)"/><ellipse id="Oval_Copy_2" data-name="Oval Copy 2" class="cls-1" cx="6.045" cy="6.456" rx="6.045" ry="6.456" transform="translate(8.636)"/><path id="Line_5" data-name="Line 5" class="cls-2a" d="M0 0v5.343h1.4V0z" transform="translate(5.614 16.475)"/><path id="Line_5_Copy" data-name="Line 5 Copy" class="cls-2a" d="M0 0v8.905h1.4V0z" transform="translate(14.25 12.913)"/><path id="Oval_Copy" data-name="Oval Copy" class="cls-1" d="M0 4.23A4.069 4.069 0 0 0 3.886 0" transform="translate(5.527 9.96)"/><path id="Oval_Copy_3" data-name="Oval Copy 3" class="cls-1" d="M0 4.23A4.069 4.069 0 0 0 3.886 0" transform="translate(14.279 5.692)"/></g></g></g></svg>';
 
     // 全部
     function changeFilterAll() {
@@ -943,5 +943,6 @@ map.on('pointermove', function (e) {
 });
 
 $('[data-toggle="tooltip"]').tooltip({
-    placement: 'right'
+    placement: 'right',
+    trigger: 'hover'
 });
