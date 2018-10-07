@@ -209,19 +209,29 @@ app.CustomControl = function (opt_options) {
     var currentLayerIndex = 0;
 
     var filterAll = document.createElement('button');
+    filterAll.title = '全部';
+    filterAll.dataset.toggle = 'tooltip';
     filterAll.classList.add('active');
     filterAll.innerHTML = '<div class="filter-all-inner"></div>';
 
     var filterViewSpot = document.createElement('button');
+    filterViewSpot.title = '观光景点';
+    filterViewSpot.dataset.toggle = 'tooltip';
     filterViewSpot.innerHTML = '<div class="filter-viewspot-inner"></div>';
 
     var filterFood = document.createElement('button');
+    filterFood.title = '美食';
+    filterFood.dataset.toggle = 'tooltip';
     filterFood.innerHTML = '<div class="filter-food-inner"></div>';
 
     var filterEntertainment = document.createElement('button');
+    filterEntertainment.title = '娱乐活动';
+    filterEntertainment.dataset.toggle = 'tooltip';
     filterEntertainment.innerHTML = '<div class="filter-entertainment-inner"></div>';
 
     var filterHoliday = document.createElement('button');
+    filterHoliday.title = '节日盛事';
+    filterHoliday.dataset.toggle = 'tooltip';
     filterHoliday.innerHTML = '<div class="filter-holiday-inner"></div>';
 
     // 全部
@@ -306,7 +316,7 @@ app.CustomControl = function (opt_options) {
     filterHoliday.addEventListener('touchstart', changeFilterHoliday, false);
 
     var element = document.createElement('div');
-    element.className = 'ol-feature-filter ol-unselectable ol-control bs20 oh';
+    element.className = 'ol-feature-filter ol-unselectable ol-control bs20';
     element.appendChild(filterAll);
     element.appendChild(filterViewSpot);
     element.appendChild(filterFood);
@@ -830,18 +840,14 @@ var projection = new ol.proj.Projection({
 var backgroundLayer = new ol.layer.Image({
     source: new ol.source.ImageStatic({
         // 背景底图 background image
-        url: 'https://ws1.sinaimg.cn/large/9130c6a9gy1ft5ngnh7m0j22kg3vz1kx.jpg',
+        url: backgroundSvgString,
         projection: projection,
         imageExtent: extent
     })
 });
 
-var zoomIn = document.createElement("img");
-zoomIn.setAttribute('src', 'https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/zoom-in-2.svg');
-zoomIn.setAttribute('alt', 'zoom-in');
-var zoomOut = document.createElement("img");
-zoomOut.setAttribute('src', 'https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/zoom-out-2.svg');
-zoomOut.setAttribute('alt', 'zoom-out');
+var zoomIn = $('<svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><defs><style/></defs><path d="M469.333 469.333H170.667v85.334h298.666v298.666h85.334V554.667h298.666v-85.334H554.667V170.667h-85.334v298.666z" fill="#ced0d5"/></svg>')[0];
+var zoomOut = $('<svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><defs><style/></defs><path d="M170.667 469.333h682.666v85.334H170.667z" fill="#ced0d5"/></svg>')[0];
 
 var map = new ol.Map({
     controls: ol.control.defaults({
@@ -934,4 +940,8 @@ map.on('pointermove', function (e) {
     var pixel = map.getEventPixel(e.originalEvent);
     var hit = map.hasFeatureAtPixel(pixel);
     map.getTarget().style.cursor = hit ? 'pointer' : '';
+});
+
+$('[data-toggle="tooltip"]').tooltip({
+    placement: 'right'
 });
