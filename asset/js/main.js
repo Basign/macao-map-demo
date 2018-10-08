@@ -348,442 +348,251 @@ ol.inherits(app.CustomControl, ol.control.Control);
 window.mapData = {};
 var mapData = window.mapData;
 
+var commonPolygonStyle = new ol.style.Style({
+    fill: new ol.style.Fill({
+        color: 'rgba(255, 255, 255, 0)'
+    })
+});
 mapData.features = {
     data: {
         viewSpot: [
             // 大三巴
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['1'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['1'].coordinates),
                     siteId: '1'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/11/Pud0eg.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 大炮台
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['2'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['2'].coordinates),
                     siteId: '2'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/11/PuwPpt.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 博物馆
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['3'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['3'].coordinates),
                     siteId: '3'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/Pu2wIf.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 议事亭前地
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['4'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['4'].coordinates),
                     siteId: '4'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/Pu2Bi8.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 玫瑰堂
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['5'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['5'].coordinates),
                     siteId: '5'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/Pu2rRg.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 东望洋炮台
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['6'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['6'].coordinates),
                     siteId: '6'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/Pu2css.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // TODO 大赛车博物馆
-            // {
-            //     feature: new ol.Feature({
-            //         geometry: new ol.geom.Point(siteData['7'].coordinates),
-            //         siteId: '7'
-            //     }),
-            //     style: new ol.style.Style({
-            //         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-            //             anchor: [0.5, 1],
-            //             anchorXUnits: 'fraction',
-            //             anchorYUnits: 'fraction',
-            //             src: 'https://s1.ax1x.com/2018/07/12/Pu2css.png'
-            //         }))
-            //     })
-            // },
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Polygon(siteData['7'].coordinates),
+                    siteId: '7'
+                }),
+                style: commonPolygonStyle
+            },
             // 渔人码头
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['8'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['8'].coordinates),
                     siteId: '8'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/Pu2Odx.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 科学馆
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['9'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['9'].coordinates),
                     siteId: '9'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/Pu2xJO.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 郑家大屋
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['10'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['10'].coordinates),
                     siteId: '10'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/Pu2zWD.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // TODO 妈阁庙
-            // {
-            //     feature: new ol.Feature({
-            //         geometry: new ol.geom.Point(siteData['11'].coordinates),
-            //         siteId: '11'
-            //     }),
-            //     style: new ol.style.Style({
-            //         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-            //             anchor: [0.5, 1],
-            //             anchorXUnits: 'fraction',
-            //             anchorYUnits: 'fraction',
-            //             src: 'https://s1.ax1x.com/2018/07/12/Pu2zWD.png'
-            //         }))
-            //     })
-            // },
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Polygon(siteData['11'].coordinates),
+                    siteId: '11'
+                }),
+                style: commonPolygonStyle
+            },
             // 旅游塔
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['12'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['12'].coordinates),
                     siteId: '12'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/PuRATP.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 龙环葡韵
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['13'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['13'].coordinates),
                     siteId: '13'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/PuRefS.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 官也街
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['14'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['14'].coordinates),
                     siteId: '14'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/PufwIx.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 威尼斯人
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['16'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['16'].coordinates),
                     siteId: '16'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/PuR21e.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 巴黎人
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['17'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['17'].coordinates),
                     siteId: '17'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/PuR57t.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 大熊猫馆
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['21'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['21'].coordinates),
                     siteId: '21'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/PuWnN6.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 圣方济各圣堂
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['22'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['22'].coordinates),
                     siteId: '22'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/PuW1jH.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 黑沙海滩
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['24'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['24'].coordinates),
                     siteId: '24'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/PufSrd.png'
-                    }))
-                })
-            }
+                style: commonPolygonStyle
+            },
         ],
         food: [
             // 官也街
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['14'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['14'].coordinates),
                     siteId: '14'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/12/PufwIx.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 杏仁饼
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['15'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['15'].coordinates),
                     siteId: '15'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/11/Puwuhn.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 葡式蛋挞
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['23'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['23'].coordinates),
                     siteId: '23'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/11/PuwBjK.png'
-                    }))
-                })
-            }
+                style: commonPolygonStyle
+            },
         ],
         entertainment: [
             // 购物中心
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['18'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['18'].coordinates),
                     siteId: '18'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/11/Pu06MV.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // TODO 家庭儿童娱乐
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['19'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['19'].coordinates),
                     siteId: '19'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/11/Pu0LZD.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 金光综艺馆
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['20'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['20'].coordinates),
                     siteId: '20'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [165, 112],
-                        anchorXUnits: 'pixels',
-                        anchorYUnits: 'pixels',
-                        src: 'https://s1.ax1x.com/2018/07/12/PuR7h8.png'
-                    }))
-                })
-            }
+                style: commonPolygonStyle
+            },
         ],
         holiday: [
             // 澳门光影节
-            // {
-            //     feature: new ol.Feature({
-            //         geometry: new ol.geom.Point(siteData['19'].coordinates),
-            //         siteId: '25'
-            //     }),
-            //     style: new ol.style.Style({
-            //         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-            //             anchor: [0.5, 1],
-            //             anchorXUnits: 'fraction',
-            //             anchorYUnits: 'fraction',
-            //             src: 'https://openlayers.org/en/v4.6.5/examples/data/icon.png'
-            //         }))
-            //     })
-            // },
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Polygon(siteData['25'].coordinates),
+                    siteId: '25'
+                }),
+                style: commonPolygonStyle
+            },
             // 澳门格兰披治大赛车
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['26'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['26'].coordinates),
                     siteId: '26'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/11/PuBMLT.png'
-                    }))
-                })
+                style: commonPolygonStyle
             },
             // 烟花
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(siteData['27'].coordinates),
+                    geometry: new ol.geom.Polygon(siteData['27'].coordinates),
                     siteId: '27'
                 }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: 'https://s1.ax1x.com/2018/07/11/PuB0eO.png'
-                    }))
-                })
-            }
+                style: commonPolygonStyle
+            },
         ]
     },
     setFeatureStyle: function (feature, style) {
         feature.setStyle(
             function (feature, resolution) {
                 var defaultResolution = 1; // map.View 缩放倍数
-                style.getImage().setScale(defaultResolution / resolution);
+                // style.getImage().setScale(defaultResolution / resolution);
                 return style;
             }
         );
@@ -915,7 +724,14 @@ function mapClick(evt) {
         });
     var coordinates;
     if (feature) {
-        coordinates = feature.getGeometry().getCoordinates();
+        coordinates = feature.getGeometry().getCoordinates()[0];
+
+        var cXStart = coordinates[2][0];
+        var cXEnd = coordinates[3][0];
+        var cX = (cXStart + cXEnd) / 2;
+        var cY = coordinates[2][1] - 22;
+        coordinates = [cX, cY];
+
         popup.setPosition(coordinates);
         if ($('#popup+.popover').length > 0) {
             // $('.popup-link-container').trigger('click');

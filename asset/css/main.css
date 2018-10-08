@@ -478,7 +478,7 @@ main.full {
     position: relative;
     height: 100%;
     width: 100%;
-    background-color: #a9cad8;
+    background-color: #a9c8d8;
 }
 
 .ol-control>button:not(:first-child)::before {
