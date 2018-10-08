@@ -247,9 +247,13 @@ app.CustomControl = function (opt_options) {
         this_.getMap().setLayerGroup(new ol.layer.Group({
             layers: [backgroundLayer,
                 mapData.layers.layersDict['viewSpot'],
+                mapData.layers.layersDict['viewSpotIcon'],
                 mapData.layers.layersDict['food'],
+                mapData.layers.layersDict['foodIcon'],
                 mapData.layers.layersDict['entertainment'],
-                mapData.layers.layersDict['holiday']]
+                mapData.layers.layersDict['entertainmentIcon'],
+                mapData.layers.layersDict['holiday'],
+                mapData.layers.layersDict['holidayIcon']]
         }));
 
         zoomOut();
@@ -267,7 +271,7 @@ app.CustomControl = function (opt_options) {
         this_.currentLayerIndex = 1;
 
         this_.getMap().setLayerGroup(new ol.layer.Group({
-            layers: [backgroundLayer, mapData.layers.layersDict['viewSpot']]
+            layers: [backgroundLayer, mapData.layers.layersDict['viewSpot'], mapData.layers.layersDict['viewSpotIcon']]
         }));
 
         zoomOut();
@@ -285,7 +289,7 @@ app.CustomControl = function (opt_options) {
         this_.currentLayerIndex = 2;
 
         this_.getMap().setLayerGroup(new ol.layer.Group({
-            layers: [backgroundLayer, mapData.layers.layersDict['food']]
+            layers: [backgroundLayer, mapData.layers.layersDict['food'], mapData.layers.layersDict['foodIcon']]
         }));
 
         zoomOut();
@@ -303,7 +307,7 @@ app.CustomControl = function (opt_options) {
         this_.currentLayerIndex = 3;
 
         this_.getMap().setLayerGroup(new ol.layer.Group({
-            layers: [backgroundLayer, mapData.layers.layersDict['entertainment']]
+            layers: [backgroundLayer, mapData.layers.layersDict['entertainment'], mapData.layers.layersDict['entertainmentIcon']]
         }));
 
         zoomOut();
@@ -321,7 +325,7 @@ app.CustomControl = function (opt_options) {
         this_.currentLayerIndex = 4;
 
         this_.getMap().setLayerGroup(new ol.layer.Group({
-            layers: [backgroundLayer, mapData.layers.layersDict['holiday']]
+            layers: [backgroundLayer, mapData.layers.layersDict['holiday'], mapData.layers.layersDict['holidayIcon']]
         }));
 
         zoomOut();
@@ -344,258 +348,41 @@ app.CustomControl = function (opt_options) {
 };
 ol.inherits(app.CustomControl, ol.control.Control);
 
-// namespace for all features
-window.mapData = {};
-var mapData = window.mapData;
-
+var mapData = {};
 var commonPolygonStyle = new ol.style.Style({
     fill: new ol.style.Fill({
         color: 'rgba(255, 255, 255, 0)'
     })
 });
+var commonIconStyle = new ol.style.Style({
+    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+        anchor: [0.5, 1],
+        anchorXUnits: 'fraction',
+        anchorYUnits: 'fraction',
+        src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 80' width='24' height='32'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='53.88' y1='61.13' x2='10.32' y2='7.34' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f33070'/%3E%3Cstop offset='.18' stop-color='%23f93b67'/%3E%3Cstop offset='.45' stop-color='%23ff475d'/%3E%3Cstop offset='.45' stop-color='%23ff485d'/%3E%3Cstop offset='.58' stop-color='%23ff6267'/%3E%3Cstop offset='.72' stop-color='%23ff756e'/%3E%3Cstop offset='.85' stop-color='%23ff8073'/%3E%3Cstop offset='1' stop-color='%23ff8474'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg data-name='图层 2'%3E%3Cg data-name='图层 1'%3E%3Cpath d='M30 0A30 30 0 0 0 0 30a29.67 29.67 0 0 0 4.64 16c.39.67.83 1.32 1.28 2l.09.12 22.67 31.2a1.63 1.63 0 0 0 2.65 0L54 48.07l.07-.09c.46-.64.89-1.3 1.29-2A29.67 29.67 0 0 0 60 30 30 30 0 0 0 30 0z' fill='url(%23a)'/%3E%3Ccircle cx='30' cy='30' r='11.75' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"
+    }))
+});
+function featureCoor2XY(coor) {
+    var coordinates = coor[0];
+    var cXStart = coordinates[2][0];
+    var cXEnd = coordinates[3][0];
+    var cX = (cXStart + cXEnd) / 2;
+    var cY = coordinates[2][1] + 15;
+    return [cX, cY];
+};
 mapData.features = {
-    data: {
-        viewSpot: [
-            // 大三巴
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['1'].coordinates),
-                    siteId: '1'
-                }),
-                style: commonPolygonStyle
-            },
-            // 大炮台
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['2'].coordinates),
-                    siteId: '2'
-                }),
-                style: commonPolygonStyle
-            },
-            // 博物馆
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['3'].coordinates),
-                    siteId: '3'
-                }),
-                style: commonPolygonStyle
-            },
-            // 议事亭前地
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['4'].coordinates),
-                    siteId: '4'
-                }),
-                style: commonPolygonStyle
-            },
-            // 玫瑰堂
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['5'].coordinates),
-                    siteId: '5'
-                }),
-                style: commonPolygonStyle
-            },
-            // 东望洋炮台
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['6'].coordinates),
-                    siteId: '6'
-                }),
-                style: commonPolygonStyle
-            },
-            // TODO 大赛车博物馆
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['7'].coordinates),
-                    siteId: '7'
-                }),
-                style: commonPolygonStyle
-            },
-            // 渔人码头
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['8'].coordinates),
-                    siteId: '8'
-                }),
-                style: commonPolygonStyle
-            },
-            // 科学馆
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['9'].coordinates),
-                    siteId: '9'
-                }),
-                style: commonPolygonStyle
-            },
-            // 郑家大屋
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['10'].coordinates),
-                    siteId: '10'
-                }),
-                style: commonPolygonStyle
-            },
-            // TODO 妈阁庙
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['11'].coordinates),
-                    siteId: '11'
-                }),
-                style: commonPolygonStyle
-            },
-            // 旅游塔
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['12'].coordinates),
-                    siteId: '12'
-                }),
-                style: commonPolygonStyle
-            },
-            // 龙环葡韵
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['13'].coordinates),
-                    siteId: '13'
-                }),
-                style: commonPolygonStyle
-            },
-            // 官也街
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['14'].coordinates),
-                    siteId: '14'
-                }),
-                style: commonPolygonStyle
-            },
-            // 威尼斯人
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['16'].coordinates),
-                    siteId: '16'
-                }),
-                style: commonPolygonStyle
-            },
-            // 巴黎人
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['17'].coordinates),
-                    siteId: '17'
-                }),
-                style: commonPolygonStyle
-            },
-            // 大熊猫馆
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['21'].coordinates),
-                    siteId: '21'
-                }),
-                style: commonPolygonStyle
-            },
-            // 圣方济各圣堂
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['22'].coordinates),
-                    siteId: '22'
-                }),
-                style: commonPolygonStyle
-            },
-            // 黑沙海滩
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['24'].coordinates),
-                    siteId: '24'
-                }),
-                style: commonPolygonStyle
-            },
-        ],
-        food: [
-            // 官也街
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['14'].coordinates),
-                    siteId: '14'
-                }),
-                style: commonPolygonStyle
-            },
-            // 杏仁饼
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['15'].coordinates),
-                    siteId: '15'
-                }),
-                style: commonPolygonStyle
-            },
-            // 葡式蛋挞
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['23'].coordinates),
-                    siteId: '23'
-                }),
-                style: commonPolygonStyle
-            },
-        ],
-        entertainment: [
-            // 购物中心
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['18'].coordinates),
-                    siteId: '18'
-                }),
-                style: commonPolygonStyle
-            },
-            // TODO 家庭儿童娱乐
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['19'].coordinates),
-                    siteId: '19'
-                }),
-                style: commonPolygonStyle
-            },
-            // 金光综艺馆
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['20'].coordinates),
-                    siteId: '20'
-                }),
-                style: commonPolygonStyle
-            },
-        ],
-        holiday: [
-            // 澳门光影节
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['25'].coordinates),
-                    siteId: '25'
-                }),
-                style: commonPolygonStyle
-            },
-            // 澳门格兰披治大赛车
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['26'].coordinates),
-                    siteId: '26'
-                }),
-                style: commonPolygonStyle
-            },
-            // 烟花
-            {
-                feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData['27'].coordinates),
-                    siteId: '27'
-                }),
-                style: commonPolygonStyle
-            },
-        ]
-    },
     setFeatureStyle: function (feature, style) {
-        feature.setStyle(
-            function (feature, resolution) {
+        var stylePara;
+        if (!feature.get('isIcon')) {
+            stylePara = style;
+        } else {
+            stylePara = function (feature, resolution) {
                 var defaultResolution = 1; // map.View 缩放倍数
-                // style.getImage().setScale(defaultResolution / resolution);
+                style.getImage().setScale(defaultResolution / resolution);
                 return style;
-            }
-        );
+            };
+        }
+        feature.setStyle(stylePara);
         return feature;
     },
     featuresDict: {},
@@ -613,6 +400,35 @@ mapData.features = {
         }
     }
 };
+mapData.features.data = {};
+for (filter in siteFilterData) {
+    var tempArray = [];
+    var tempIconArray = [];
+    var siteLength = siteFilterData[filter].length;
+    for (var i = 0; i < siteLength; i++) {
+        tempArray.push(
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Polygon(siteData[siteFilterData[filter][i]].coordinates),
+                    siteId: siteFilterData[filter][i]
+                }),
+                style: commonPolygonStyle
+            }
+        );
+        tempIconArray.push(
+            {
+                feature: new ol.Feature({
+                    geometry: new ol.geom.Point(featureCoor2XY(siteData[siteFilterData[filter][i]].coordinates)),
+                    siteId: siteFilterData[filter][i],
+                    isIcon: true
+                }),
+                style: commonIconStyle
+            }
+        )
+    }
+    mapData.features.data[filter] = tempArray;
+    mapData.features.data[filter + 'Icon'] = tempIconArray;
+}
 mapData.features.init();
 
 mapData.sources = {
@@ -690,9 +506,13 @@ var map = new ol.Map({
     target: document.getElementById('map'),
     layers: [backgroundLayer,
         mapData.layers.layersDict['viewSpot'],
+        mapData.layers.layersDict['viewSpotIcon'],
         mapData.layers.layersDict['food'],
+        mapData.layers.layersDict['foodIcon'],
         mapData.layers.layersDict['entertainment'],
-        mapData.layers.layersDict['holiday']],
+        mapData.layers.layersDict['entertainmentIcon'],
+        mapData.layers.layersDict['holiday'],
+        mapData.layers.layersDict['holidayIcon']],
     view: new ol.View({
         projection: projection,
         // center: ol.extent.getCenter(extent),
@@ -724,13 +544,18 @@ function mapClick(evt) {
         });
     var coordinates;
     if (feature) {
-        coordinates = feature.getGeometry().getCoordinates()[0];
+        coordinates = feature.getGeometry().getCoordinates();
 
-        var cXStart = coordinates[2][0];
-        var cXEnd = coordinates[3][0];
-        var cX = (cXStart + cXEnd) / 2;
-        var cY = coordinates[2][1] - 22;
-        coordinates = [cX, cY];
+        if (!feature.get('isIcon')) {
+            coordinates = coordinates[0];
+            var cXStart = coordinates[2][0];
+            var cXEnd = coordinates[3][0];
+            var cX = (cXStart + cXEnd) / 2;
+            var cY = coordinates[2][1] - 22;
+            coordinates = [cX, cY];
+        } else {
+            return false;
+        }
 
         popup.setPosition(coordinates);
         if ($('#popup+.popover').length > 0) {
@@ -774,7 +599,17 @@ map.on('pointermove', function (e) {
         return;
     }
     var pixel = map.getEventPixel(e.originalEvent);
-    var hit = map.hasFeatureAtPixel(pixel);
+    var hit = false;
+    var feature = map.forEachFeatureAtPixel(e.pixel,
+        function (feature) {
+            return feature;
+        });
+    if (feature) {
+        if (!feature.get('isIcon')) {
+            hit = true;
+        }
+    }
+
     map.getTarget().style.cursor = hit ? 'pointer' : '';
 });
 
