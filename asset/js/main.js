@@ -1,3 +1,10 @@
+// 生成 HTML
+(function i18nReplace() {
+    $.each($('.MOLT'), function (index, value) {
+        value.innerHTML = siteFilterData[index].i18n;
+    });
+})();
+
 // bug fix hack
 $(function () {
     if (typeof (Event) === 'function') {
@@ -401,16 +408,17 @@ mapData.features = {
     }
 };
 mapData.features.data = {};
-for (filter in siteFilterData) {
+var siteFilterLength = siteFilterData.length;
+for (var i = 1; i < siteFilterLength; i++) {
     var tempArray = [];
     var tempIconArray = [];
-    var siteLength = siteFilterData[filter].length;
-    for (var i = 0; i < siteLength; i++) {
+    var siteLength = siteFilterData[i].sites.length;
+    for (var j = 0; j < siteLength; j++) {
         tempArray.push(
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Polygon(siteData[siteFilterData[filter][i]].coordinates),
-                    siteId: siteFilterData[filter][i]
+                    geometry: new ol.geom.Polygon(siteData[siteFilterData[i].sites[j]].coordinates),
+                    siteId: siteFilterData[i].sites[j]
                 }),
                 style: commonPolygonStyle
             }
@@ -418,16 +426,16 @@ for (filter in siteFilterData) {
         tempIconArray.push(
             {
                 feature: new ol.Feature({
-                    geometry: new ol.geom.Point(featureCoor2XY(siteData[siteFilterData[filter][i]].coordinates)),
-                    siteId: siteFilterData[filter][i],
+                    geometry: new ol.geom.Point(featureCoor2XY(siteData[siteFilterData[i].sites[j]].coordinates)),
+                    siteId: siteFilterData[i].sites[j],
                     isIcon: true
                 }),
                 style: commonIconStyle
             }
         )
     }
-    mapData.features.data[filter] = tempArray;
-    mapData.features.data[filter + 'Icon'] = tempIconArray;
+    mapData.features.data[siteFilterData[i].name] = tempArray;
+    mapData.features.data[siteFilterData[i].name + 'Icon'] = tempIconArray;
 }
 mapData.features.init();
 
