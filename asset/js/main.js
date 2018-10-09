@@ -166,10 +166,11 @@ function MenuList() {
 
     $(document).on('click', '.mlrb', function findOnMap() {
         // 切换 全部 图层, 以显示所有 feature
-        $('.ol-feature-filter>button').eq(0).trigger('click');
+        globalChangeFilterAll(false);
 
         $('.tB').trigger('click');
-        map.getView().animate({ center: self.currentFeatureCoordinates }, { resolution: 0.5 });
+
+        map.getView().animate({ center: featureCoor2XY(self.currentFeatureCoordinates) }, { resolution: mapPara.minResolution });
     });
 
     $(document).on('click', '.lCiW', function () {
@@ -233,6 +234,7 @@ var app = window.app;
  * @extends {ol.control.Control}
  * @param {Object=} opt_options Control options.
  */
+var globalChangeFilterAll;
 app.CustomControl = function (opt_options) {
     var options = opt_options || {};
 
@@ -270,7 +272,7 @@ app.CustomControl = function (opt_options) {
     }
 
     // 全部
-    function changeFilterAll() {
+    var changeFilterAll = function (noCenter) {
         $('.ol-feature-filter>button.active').removeClass('active');
         $(this).addClass('active');
         this_.currentLayerIndex = 0;
@@ -287,8 +289,11 @@ app.CustomControl = function (opt_options) {
                 mapData.layers.layersDict['holidayIcon']]
         }));
 
-        zoomOut();
+        if (noCenter != false) {
+            zoomOut();
+        }
     }
+    globalChangeFilterAll = changeFilterAll;
     filterAll.addEventListener('click', changeFilterAll, false);
     filterAll.addEventListener('touchstart', changeFilterAll, false);
 
@@ -522,6 +527,7 @@ var zoomOut = $('<svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.
 
 var mapPara = {
     resolution: 2,
+    minResolution: 0.5,
     maxResolution: 4,
     center: [1058, 1602],
     initialCenter: [450, 2470] // 以大三巴为中心
@@ -554,7 +560,7 @@ var map = new ol.Map({
         // 最小缩放 1/4 大
         maxResolution: mapPara.maxResolution,
         // 最大缩放 1/0.5 大
-        minResolution: 0.5
+        minResolution: mapPara.minResolution
     })
 });
 
