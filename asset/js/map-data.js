@@ -1,3 +1,10 @@
+var i18n = {
+    'collapse': '展开',
+    'fold': '收起',
+    'findOnMap': '在地图上查看',
+    'relatedLocations': '相关地点'
+}
+
 var siteFilterData = [
     {
         name: 'all',
