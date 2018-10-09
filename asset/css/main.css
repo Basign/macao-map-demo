@@ -219,6 +219,7 @@ main.full {
     overflow-y: auto;
     overflow-x: hidden;
     background: rgba(221, 239, 252, 0.7);
+    -webkit-overflow-scrolling: touch;
 }
 
 .mll:not(.mllf) {
@@ -227,6 +228,7 @@ main.full {
 
 .pnC {
     width: 100%;
+    min-height: calc(100% + 1px);
 }
 
 .pn {
@@ -305,6 +307,7 @@ main.full {
     color: #526483;
     overflow-x: hidden;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .mlri {
