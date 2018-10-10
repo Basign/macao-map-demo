@@ -30,6 +30,8 @@
 })();
 
 // bug fix hack
+$('html').css('font-size', '12px');
+
 $(function () {
     if (typeof (Event) === 'function') {
         // modern browsers
