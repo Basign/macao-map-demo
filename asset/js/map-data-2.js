@@ -25,12 +25,12 @@ var siteData = {
         "relatedLocations": ["10", "11"]
     },
     "6": {
-        "image": "http://via.placeholder.com/400x300",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/guia-fortress.jpg",
         "coordinates": [[[633, 2418], [730, 2418], [730, 2500], [633, 2500], [633, 2418]]],
         "relatedLocations": ["2", "8"]
     },
     "7": {
-        "image": "http://via.placeholder.com/400x300",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/grand-prix-museum.jpg",
         "coordinates": [[[725, 2362], [795, 2362], [795, 2394], [725, 2394], [725, 2362]]],
         "relatedLocations": ["26", "6"]
     },
@@ -45,7 +45,7 @@ var siteData = {
         "relatedLocations": ["3", "13"]
     },
     "10": {
-        "image": "http://via.placeholder.com/400x300",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/mandarins-house.jpg",
         "coordinates": [[[210, 2288], [302, 2288], [302, 2341], [210, 2341], [210, 2288]]],
         "relatedLocations": ["11", "5"]
     },
