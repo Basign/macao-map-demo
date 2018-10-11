@@ -19,7 +19,7 @@
         var siteLength = siteFilterData[i].sites.length;
         for (var j = 0; j < siteLength; j++) {
             var index = siteFilterData[i].sites[j];
-            var site = siteData[index];
+            var site = siteI18nData[index];
             $tempPN.append('<div data-location-id="' + index + '">\
             <span class="ln">' + site.name + '</span>\
             <img>\
@@ -67,7 +67,7 @@ $(function () {
     // 设置 menuList 图片
     $('.pn>:not(.pnt)').each(function () {
         var locationId = $(this).data('location-id');
-        $(this).children('img').attr({ 'src': siteData[locationId].image, 'alt': siteData[locationId].name });
+        $(this).children('img').attr({ 'src': siteData[locationId].image, 'alt': siteI18nData[locationId].name });
     });
 })();
 
@@ -148,7 +148,7 @@ function MenuList() {
         $(this).addClass('active');
 
         var id = $(this).data('location-id');
-        self.initLocationDetail(siteData[id]);
+        self.initLocationDetail(siteI18nData[id], siteData[id]);
     });
 
     $(document).on('click', '.mlri>.cls', function () {
@@ -182,10 +182,10 @@ function MenuList() {
 }
 
 // 点击兴趣点, 展开详情
-MenuList.prototype.initLocationDetail = function (obj) {
+MenuList.prototype.initLocationDetail = function (obj, obj2) {
     $('.mlr').scrollTop(0);
 
-    $('.mlrt').css('background-image', 'url(' + obj.image + ')');
+    $('.mlrt').css('background-image', 'url(' + obj2.image + ')');
     $('.opening-hours').html(obj.openingHours);
     $('.site-location').html(obj.location);
     $('.site-name').html(obj.name);
@@ -201,15 +201,14 @@ MenuList.prototype.initLocationDetail = function (obj) {
     }
 
     var tempHtml = '';
-    var relatedlocationLength = obj.relatedLocations.length;
+    var relatedlocationLength = obj2.relatedLocations.length;
     for (var i = 0; i < relatedlocationLength; i++) {
-        var relatedLocationId = obj.relatedLocations[i];
-        var relatedLocation = siteData[relatedLocationId];
+        var relatedLocationId = obj2.relatedLocations[i];
         tempHtml += '\
              <div class="lCi">' +
-            '  <div data-site-id="' + relatedLocationId + '" class="lCiW" style="background:no-repeat center / cover url(' + relatedLocation.image + ')">' +
+            '  <div data-site-id="' + relatedLocationId + '" class="lCiW" style="background:no-repeat center / cover url(' + siteData[relatedLocationId].image + ')">' +
             '  </div>' +
-            '  <span class="lCt">' + relatedLocation.name + '</span>' +
+            '  <span class="lCt">' + siteI18nData[relatedLocationId].name + '</span>' +
             '</div>';
     }
     $('.lC').html(tempHtml);
@@ -218,7 +217,7 @@ MenuList.prototype.initLocationDetail = function (obj) {
     $('.ml').addClass('menu-open open1 open2');
 
     // 记录当前点击 feature 坐标，为 findOnMap() 确定位置
-    this.currentFeatureCoordinates = obj.coordinates;
+    this.currentFeatureCoordinates = obj2.coordinates;
 };
 
 var menuList = new MenuList();
@@ -612,8 +611,8 @@ function mapClick(evt) {
                 '            <img src="' + siteData[feature.get('siteId')].image + '" class="popup-inner-img">' +
                 '        </div>' +
                 '        <div class="popup-inner-text-container">' +
-                '            <p class="popup-inner-text-title">' + siteData[feature.get('siteId')].name + '</p>' +
-                '            <p class="popup-inner-text-subtitle">' + siteData[feature.get('siteId')].subname + '</p>' +
+                '            <p class="popup-inner-text-title">' + siteI18nData[feature.get('siteId')].name + '</p>' +
+                '            <p class="popup-inner-text-subtitle">' + siteI18nData[feature.get('siteId')].subname + '</p>' +
                 '        </div>' +
                 '        <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/right.svg" alt="show-detail" class="popup-inner-right-arrow">' +
                 '        <div class="CF"></div>' +
