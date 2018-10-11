@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Map</title>
+  <link rel="stylesheet" href="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/vendor/openlayers/ol.css">
+  <link rel="stylesheet" href="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/css/reset.css">
+  <link rel="stylesheet" href="asset/css/main.css">
+  <!-- <link rel="stylesheet" href="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/css/main.css"> -->
+</head>
+
+<body>
+  <div class="js-offset-top"></div>
+  <div class="C oh">
+    <div id="map">
+      <div id="popup"></div>
+    </div>
+    <div class="ml h100p tr5">
+      <div class="tB bs20">
+        <div class="tBi"></div>
+      </div>
+      <div class="oML bs20">
+        <div class="oMLi"></div>
+      </div>
+      <div class="fB bs20">
+        <div class="fBi"></div>
+      </div>
+      <div class="mll h100p">
+        <div class="cBC">
+          <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/close-2.svg" alt="close-menu-list">
+        </div>
+        <div class="pnC"></div>
+      </div>
+      <div class="mlr h100p">
+        <div class="mlri">
+          <div class="cls">
+            <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/close-3.svg" alt="close-popup">
+          </div>
+          <div class="mlrt">
+            <div class="mlrtf"></div>
+            <div class="bx bs20">
+              <div class="bxi">
+                <div>
+                  <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/clock.svg" alt="opening-hours">
+                </div>
+                <span class="opening-hours"></span>
+              </div>
+              <div class="bxi">
+                <div>
+                  <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/pin.svg" alt="site-location">
+                </div>
+                <span class="site-location"></span>
+              </div>
+            </div>
+          </div>
+          <div class="mlrc">
+            <div class="site-name"></div>
+            <div class="sdC oh">
+              <p class="site-description"></p>
+            </div>
+            <div class="tg">
+              <span class="tgI"></span>
+            </div>
+          </div>
+          <div class="mlrb">
+            <div class="bxi">
+              <div>
+                <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/map.svg" alt="icon-map">
+              </div>
+              <span></span>
+            </div>
+          </div>
+          <div class="mlrb2">
+            <div class="rl"></div>
+            <div class="lC">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pC">
+      <div class="p1 bs20">
+        <span>最新优惠资讯
+          <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/upward.svg" alt="up-triangle">
+        </span>
+      </div>
+      <div class="pp bs20 tr5">
+        <div class="p2 h100p">
+          <div class="clspp">
+            <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/close.svg" alt="close-popup">
+          </div>
+          <div class="h100p">
+            <div class="p2l">
+              <p>豪华酒店65折起</p>
+              <p>港币11元吃自助</p>
+              <p>限量独家福袋大抽奖</p>
+              <p>表演门票随机送</p>
+              <a href="javascript:;" class="rese">预订</a>
+            </div>
+            <div class="p2r">
+              <img src="http://via.placeholder.com/500x600" alt="hotel">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="MO">
+      <div class="MOLIC cMO bs20">
+        <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/close-2.svg" alt="close-mobile-filter-overlay">
+      </div>
+      <div class="MOI">
+        <div class="MOLC">
+          <div class="MOL">
+            <span class="MOLT"></span>
+            <div class="MOLIC bs20">
+              <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/all-gold.svg" alt="filter-all">
+            </div>
+          </div>
+          <div class="MOL">
+            <span class="MOLT"></span>
+            <div class="MOLIC bs20">
+              <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/door-gold.svg" alt="filter-view-spot">
+            </div>
+          </div>
+          <div class="MOL">
+            <span class="MOLT"></span>
+            <div class="MOLIC bs20">
+              <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/food-gold.svg" alt="filter-food">
+            </div>
+          </div>
+          <div class="MOL">
+            <span class="MOLT"></span>
+            <div class="MOLIC bs20">
+              <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/star-gold.svg" alt="filter-entertainment">
+            </div>
+          </div>
+          <div class="MOL">
+            <span class="MOLT"></span>
+            <div class="MOLIC bs20">
+              <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/balloon-gold.svg" alt="filter-holiday">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="javascript:;" class="p1M bs20">
+      <span>查看最优惠房价</span>
+    </a>
+  </div>
+  <script src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/vendor/jquery/jquery.min.js"></script>
+  <script src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/vendor/openlayers/openlayers.js"></script>
+  <script src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/vendor/bootstrap/bootstrap-tooltip-popover.js"></script>
+  <script src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/js/preloader.js"></script>
+  <script src="asset/js/map-data-tc.js"></script>
+  <script src="asset/js/map-data-2.js"></script>
+  <!-- <script src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/js/location-data.js"></script> -->
+  <script src="asset/js/main.js"></script>
+  <!-- <script src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/js/main.js"></script> -->
+</body>
+
+</html>

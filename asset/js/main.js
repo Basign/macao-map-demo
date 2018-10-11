@@ -14,7 +14,7 @@
     for (var i = 1; i < siteFilterLength; i++) {
         var $tempPN = $('<div class="pn oh bs20 tr5">\
         <div class="pnt">' + siteFilterData[i].i18n + '\
-          <img class="tr5" src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/downward.svg" alt="down-caret">\
+          <img class="tr5" src="https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/parisian/asset/img/downward.svg" alt="down-caret">\
         </div></div>');
         var siteLength = siteFilterData[i].sites.length;
         for (var j = 0; j < siteLength; j++) {
@@ -614,7 +614,7 @@ function mapClick(evt) {
                 '            <p class="popup-inner-text-title">' + siteI18nData[feature.get('siteId')].name + '</p>' +
                 '            <p class="popup-inner-text-subtitle">' + siteI18nData[feature.get('siteId')].subname + '</p>' +
                 '        </div>' +
-                '        <img src="https://onlinemap.oss-cn-beijing.aliyuncs.com/landmarks/asset/img/right.svg" alt="show-detail" class="popup-inner-right-arrow">' +
+                '        <img src="https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/parisian/asset/img/right.svg" alt="show-detail" class="popup-inner-right-arrow">' +
                 '        <div class="CF"></div>' +
                 '    </div>' +
                 '</a>'

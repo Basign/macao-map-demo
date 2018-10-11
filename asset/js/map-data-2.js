@@ -1,26 +1,26 @@
 var siteData = {
     "1": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsv38tlue1j20ci08cmzz.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsv38tlue1j20ci08cmzz.jpg",
         "coordinates": [[[393, 2465], [514, 2465], [514, 2580], [393, 2580], [393, 2465]]],
         "relatedLocations": ["2", "4"]
     },
     "2": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkjavz8hj20cl08cdkt.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvkjavz8hj20cl08cdkt.jpg",
         "coordinates": [[[550, 2509], [621, 2509], [621, 2555], [550, 2555], [550, 2509]]],
         "relatedLocations": ["1", "3"]
     },
     "3": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkmbyfdoj20eu08ctan.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvkmbyfdoj20eu08ctan.jpg",
         "coordinates": [[[423, 2633], [671, 2633], [671, 2680], [423, 2680], [423, 2633]]],
         "relatedLocations": ["1", "11"]
     },
     "4": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvknvcktoj20cj08cgq4.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvknvcktoj20cj08cgq4.jpg",
         "coordinates": [[[458, 2347], [565, 2347], [565, 2414], [458, 2414], [458, 2347]]],
         "relatedLocations": ["1", "8"]
     },
     "5": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkphcbpkj20ck08cjxg.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvkphcbpkj20ck08cjxg.jpg",
         "coordinates": [[[340, 2389], [411, 2389], [411, 2470], [340, 2470], [340, 2389]]],
         "relatedLocations": ["10", "11"]
     },
@@ -35,12 +35,12 @@ var siteData = {
         "relatedLocations": ["26", "6"]
     },
     "8": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvktjp7jqj20ct08cq77.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvktjp7jqj20ct08cq77.jpg",
         "coordinates": [[[723, 2216], [828, 2216], [828, 2268], [723, 2268], [723, 2216]]],
         "relatedLocations": ["6", "24"]
     },
     "9": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkvc3k8rj20ck08cq65.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvkvc3k8rj20ck08cq65.jpg",
         "coordinates": [[[791, 2135], [906, 2135], [906, 2207], [791, 2207], [791, 2135]]],
         "relatedLocations": ["3", "13"]
     },
@@ -50,87 +50,87 @@ var siteData = {
         "relatedLocations": ["11", "5"]
     },
     "11": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvl3ij43xj20ci08cjyy.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvl3ij43xj20ci08cjyy.jpg",
         "coordinates": [[[106, 2083], [219, 2083], [219, 2149], [106, 2149], [106, 2083]]],
         "relatedLocations": ["1", "5"]
     },
     "12": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvl40pgsij20ci08cjut.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvl40pgsij20ci08cjut.jpg",
         "coordinates": [[[356, 1946], [392, 1946], [392, 2220], [356, 2220], [356, 1946]]],
         "relatedLocations": ["27", "25"]
     },
     "13": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvl5z9qt0j20ci08cjtr.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvl5z9qt0j20ci08cjtr.jpg",
         "coordinates": [[[759, 1435], [886, 1435], [886, 1526], [759, 1526], [759, 1435]]],
         "relatedLocations": ["14", "16"]
     },
     "14": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvl8qwawsj20ci08c0ub.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvl8qwawsj20ci08c0ub.jpg",
         "coordinates": [[[548, 1333], [783, 1333], [783, 1407], [548, 1407], [548, 1333]]],
         "relatedLocations": ["15", "13"]
     },
     "15": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlb5e57mj20eu08cjte.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvlb5e57mj20eu08cjte.jpg",
         "coordinates": [[[511, 1390], [606, 1390], [606, 1447], [511, 1447], [511, 1390]]],
         "relatedLocations": ["14", "23"]
     },
     "16": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlda4g6nj20ci08cmyt.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvlda4g6nj20ci08cmyt.jpg",
         "coordinates": [[[848, 1140], [942, 1140], [942, 1264], [848, 1264], [848, 1140]]],
         "relatedLocations": ["20", "17"]
     },
     "17": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlfpqbpuj20ci08cjvc.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvlfpqbpuj20ci08cjvc.jpg",
         "coordinates": [[[876, 968], [1010, 968], [1010, 1131], [876, 1131], [876, 968]]],
         "relatedLocations": ["16", "18"]
     },
     "18": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlgymzssj20ci08cq7i.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvlgymzssj20ci08cq7i.jpg",
         "coordinates": [[[711, 1060], [840, 1060], [840, 1138], [711, 1138], [711, 1060]]],
         "relatedLocations": ["19", "16"]
     },
     "19": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvll0ldm4j20ci08cjwi.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvll0ldm4j20ci08cjwi.jpg",
         "coordinates": [[[1092, 1118], [1157, 1118], [1157, 1164], [1092, 1164], [1092, 1118]]],
         "relatedLocations": ["21", "18"]
     },
     "20": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlq61y5bj20ci08cmzs.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvlq61y5bj20ci08cmzs.jpg",
         "coordinates": [[[728, 1205], [837, 1205], [837, 1260], [728, 1260], [729, 1205]]],
         "relatedLocations": ["16", "17"]
     },
     "21": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlt2z221j20ci08cjrv.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvlt2z221j20ci08cjrv.jpg",
         "coordinates": [[[971, 610], [1126, 610], [1126, 707], [971, 707], [971, 610]]],
         "relatedLocations": ["19", "23"]
     },
     "22": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlugwd4hj20ci08cmxf.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvlugwd4hj20ci08cmxf.jpg",
         "coordinates": [[[829, 317], [1051, 317], [1051, 432], [829, 432], [829, 317]]],
         "relatedLocations": ["21", "24"]
     },
     "23": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlvsm0soj20cj08cn11.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvlvsm0soj20cj08cn11.jpg",
         "coordinates": [[[700, 560], [821, 560], [821, 642], [700, 642], [700, 560]]],
         "relatedLocations": ["18", "15"]
     },
     "24": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlyjx2xdj20ci0irmxn.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvlyjx2xdj20ci0irmxn.jpg",
         "coordinates": [[[1558, 655], [1797, 655], [1797, 735], [1558, 735], [1558, 655]]],
         "relatedLocations": ["22", "23"]
     },
     "25": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvlzkdrnij20ci08cwex.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvlzkdrnij20ci08cwex.jpg",
         "coordinates": [[[308, 2238], [419, 2238], [419, 2368], [308, 2368], [308, 2238]]],
         "relatedLocations": ["12", "4"]
     },
     "26": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvm0na6k4j20ci08cwff.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvm0na6k4j20ci08cwff.jpg",
         "coordinates": [[[591, 2225], [665, 2225], [665, 2253], [591, 2253], [591, 2225]]],
         "relatedLocations": ["7", "25"]
     },
     "27": {
-        "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvm1ysgcyj20ck08c0ul.jpg",
+        "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvm1ysgcyj20ck08c0ul.jpg",
         "coordinates": [[[238, 1819], [407, 1819], [407, 1928], [238, 1928], [238, 1819]]],
         "relatedLocations": ["12", "17"]
     }
