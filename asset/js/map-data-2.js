@@ -121,7 +121,7 @@ var siteData = {
     },
     "25": {
         "image": "https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/landmarks/asset/images/9130c6a9gy1fsvlzkdrnij20ci08cwex.jpg",
-        "coordinates": [[[308, 2238], [419, 2238], [419, 2368], [308, 2368], [308, 2238]]],
+        "coordinates": [[[308, 2268], [419, 2268], [419, 2338], [308, 2338], [308, 2268]]],
         "relatedLocations": ["12", "4"]
     },
     "26": {

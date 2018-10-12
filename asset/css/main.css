@@ -815,8 +815,8 @@ main.full {
 
 /* ------------------------------ popover inner ------------------------------ */
 
-.popup-link-container {
-    display: block;
+.popover {
+    cursor: pointer;
 }
 
 .popup-inner-img-container {

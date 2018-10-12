@@ -388,7 +388,7 @@ ol.inherits(app.CustomControl, ol.control.Control);
 var mapData = {};
 var commonPolygonStyle = new ol.style.Style({
     fill: new ol.style.Fill({
-        color: 'rgba(255, 255, 255, 0)'
+        color: 'rgba(0, 0, 255, 0)'
     })
 });
 var commonIconStyle = new ol.style.Style({
@@ -593,7 +593,12 @@ function mapClick(evt) {
             var cY = coordinates[2][1] - 22;
             coordinates = [cX, cY];
         } else {
-            return false;
+            if ($('.popup-link-container').data('site-id') == feature.get('siteId')) {
+                return false;
+            }
+            var cX = coordinates[0];
+            var cY = coordinates[1] - 37;
+            coordinates = [cX, cY];
         }
 
         popup.setPosition(coordinates);
@@ -605,7 +610,7 @@ function mapClick(evt) {
             'placement': 'top',
             'html': true,
             'content': '\
-                 <a class="popup-link-container" href="javascript:;" onclick="triggerInitLocationDetail(\'' + feature.get('siteId') + '\');">' +
+                 <div class="popup-link-container" data-site-id="' + feature.get('siteId') + '">' +
                 '    <div class="popup-inner">' +
                 '        <div class="popup-inner-img-container">' +
                 '            <img src="' + siteData[feature.get('siteId')].image + '" class="popup-inner-img">' +
@@ -617,7 +622,7 @@ function mapClick(evt) {
                 '        <img src="https://assets.sandsresortsmacao.cn/content/parisianmacao/onlinemap/parisian/asset/img/right.svg" alt="show-detail" class="popup-inner-right-arrow">' +
                 '        <div class="CF"></div>' +
                 '    </div>' +
-                '</a>'
+                '</div>'
         });
         $(element).popover('show');
     } else {
@@ -638,21 +643,16 @@ map.on('pointermove', function (e) {
         return;
     }
     var pixel = map.getEventPixel(e.originalEvent);
-    var hit = false;
-    var feature = map.forEachFeatureAtPixel(e.pixel,
-        function (feature) {
-            return feature;
-        });
-    if (feature) {
-        if (!feature.get('isIcon')) {
-            hit = true;
-        }
-    }
-
+    var hit = map.hasFeatureAtPixel(pixel);
     map.getTarget().style.cursor = hit ? 'pointer' : '';
 });
 
 $('[data-toggle="tooltip"]').tooltip({
     placement: 'right',
     trigger: 'hover'
+});
+
+$(document).on('click', '.popover', function () {
+    var id = $(this).find('.popup-link-container').data('site-id');
+    triggerInitLocationDetail(id);
 });
