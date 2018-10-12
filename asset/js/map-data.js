@@ -50,7 +50,7 @@ var siteI18nData = {
         "description": "Built in conjunction with the Jesuits from 1617 to 1626, this was the city's principal military defence structure. The fortress was equipped with cannons, military barracks, wells and an arsenal that held sufficient ammunition and supplies to endure a siege lasting up to two years. The fortress covers an area of 10,000 square metres, in the shape of a trapezoid. The four corners of the fortress protrude to form bulwarks.",
         "image": "https://ws1.sinaimg.cn/large/9130c6a9gy1fsvkjavz8hj20cl08cdkt.jpg",
         "coordinates": [[[550, 2509], [621, 2509], [621, 2555], [550, 2555], [550, 2509]]],
-        "subname": "中国现存最古老的西式炮台",
+        "subname": "",
         "relatedLocations": [4, 5]
     },
     "3": {
