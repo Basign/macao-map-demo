@@ -390,10 +390,12 @@ main.full {
 }
 
 .site-name {
-    line-height: 62px;
+    text-align: center;
     font-size: 16px;
     font-weight: bold;
-    text-align: center;
+    line-height: 1.5;
+    padding-top: 18px;
+    padding-bottom: 18px;
 }
 
 .sdC {
