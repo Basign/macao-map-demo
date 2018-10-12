@@ -12,7 +12,7 @@ var siteFilterData = [
     },
     {
         name: 'viewSpot',
-        i18n: 'Must-see attractions',
+        i18n: 'Must-see Attractions',
         sites: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '16', '17', '21', '22', '24']
     },
     {
@@ -204,7 +204,7 @@ var siteI18nData = {
         "relatedLocations": [7, 8]
     },
     "18": {
-        "name": "SANDS SHOPPES",
+        "name": "Sands Shoppes",
         "location": "Sands Resorts Macao, Sands Macao",
         "openingHours": "24 hours",
         "description": "The largest indoor shopping mall in Macao, Sands Shoppes offers an amazing retail experience at more than 850 duty free outlets. From finest prestige and designer labels at Shoppes at Four Seasons, Shoppes at Venetian’s world-renowned mass-market brands and boutiques, creative luxury at Shoppes at Parisian at newly opened The Parisian Macao, to the family-friendly consumer vibe of Shoppes at Cotai Central, Sands Shoppes is the perfect shopping venue. Whether you are looking for the latest seasonal trends, or collections from the finest designers, Sands Shoppes has you covered. ",
@@ -224,7 +224,7 @@ var siteI18nData = {
         "relatedLocations": [11, 12]
     },
     "20": {
-        "name": "COTAI ARENA",
+        "name": "Cotai Arena",
         "location": "The Venetian Macao",
         "openingHours": "24 hours",
         "description": "The best concerts and shows venues ever. Cotai Arena is an ideal multi-purpose indoor area for any of functions.  ",
