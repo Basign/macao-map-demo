@@ -22,7 +22,7 @@ var siteFilterData = [
     },
     {
         name: 'entertainment',
-        i18n: 'Entertainment and Activities',
+        i18n: 'Activities',
         sites: ['18', '19', '20']
     },
     {
