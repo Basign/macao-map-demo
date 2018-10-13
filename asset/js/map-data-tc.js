@@ -22,12 +22,12 @@ var siteFilterData = [
     },
     {
         name: 'entertainment',
-        i18n: '娱乐活动',
+        i18n: '娛樂活動',
         sites: ['18', '19', '20']
     },
     {
         name: 'holiday',
-        i18n: '节日盛事',
+        i18n: '節日盛事',
         sites: ['25', '26', '27']
     }
 ]
