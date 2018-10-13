@@ -53,7 +53,7 @@ $(function () {
     var offsetTopPixel = 0;
     // 利用 mobile 特殊元素判断 mobile/PC
     if ($('.m-lang').is(':hidden')) {
-        var offsetTopPixel = (topDistance + 11); // 11px = 巴黎人 PC navbar hack
+        var offsetTopPixel = (topDistance + 10); // 10px = 巴黎人 PC navbar hack
     } else {
         var offsetTopPixel = (topDistance + 4); // 7px = 巴黎人 mobile navbar hack
     }
